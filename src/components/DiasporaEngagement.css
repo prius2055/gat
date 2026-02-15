@@ -1,0 +1,842 @@
+/* ================================================
+   DIASPORA ENGAGEMENT SECTION STYLES
+   Desktop-First Approach
+   ================================================ */
+
+/* Base Section - Desktop */
+.diaspora-section {
+  padding: 6rem 0;
+  background: linear-gradient(to bottom right, #f0fdf4, #ffffff, #eff6ff);
+}
+
+.diaspora-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+/* ================================================
+   SECTION HEADER - Desktop
+   ================================================ */
+
+.diaspora-header {
+  text-align: center;
+  max-width: 48rem;
+  margin: 0 auto 4rem auto;
+}
+
+.diaspora-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: #dcfce7;
+  color: #15803d;
+  padding: 0.5rem 1rem;
+  border-radius: 9999px;
+  margin-bottom: 1rem;
+  transition: all 0.3s ease;
+}
+
+.diaspora-badge:hover {
+  background-color: #bbf7d0;
+  transform: translateY(-2px);
+}
+
+.badge-icon {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.badge-text {
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-size: 0.875rem;
+}
+
+.diaspora-title {
+  margin-top: 1rem;
+  font-size: 3rem;
+  font-weight: 700;
+  color: #111827;
+  line-height: 1.2;
+}
+
+.diaspora-description {
+  margin-top: 1.5rem;
+  font-size: 1.25rem;
+  color: #4b5563;
+  line-height: 1.75;
+}
+
+/* ================================================
+   HERO IMAGE - Desktop
+   ================================================ */
+
+.diaspora-hero-image {
+  margin-bottom: 5rem;
+  border-radius: 1.5rem;
+  overflow: hidden;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  transition: transform 0.3s ease;
+}
+
+.diaspora-hero-image:hover {
+  transform: scale(1.01);
+}
+
+.hero-image {
+  width: 100%;
+  height: 24rem;
+  object-fit: cover;
+  display: block;
+}
+
+/* ================================================
+   BENEFITS SECTION - Desktop
+   ================================================ */
+
+.benefits-section {
+  margin-bottom: 5rem;
+}
+
+.benefits-title {
+  font-size: 1.875rem;
+  font-weight: 700;
+  color: #111827;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.benefits-subtitle {
+  text-align: center;
+  color: #4b5563;
+  margin-bottom: 3rem;
+  max-width: 42rem;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 1rem;
+  line-height: 1.625;
+}
+
+.benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.benefit-card {
+  background-color: white;
+  border-radius: 1rem;
+  padding: 2rem;
+  box-shadow:
+    0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  border: 1px solid #f3f4f6;
+}
+
+.benefit-card:hover {
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  transform: translateY(-8px);
+}
+
+.benefit-icon {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 0.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+}
+
+.benefit-icon.benefit-blue {
+  background: linear-gradient(to bottom right, #3b82f6, #2563eb);
+}
+
+.benefit-icon.benefit-green {
+  background: linear-gradient(to bottom right, #22c55e, #16a34a);
+}
+
+.benefit-icon.benefit-purple {
+  background: linear-gradient(to bottom right, #a855f7, #9333ea);
+}
+
+.benefit-icon .icon {
+  width: 2rem;
+  height: 2rem;
+  color: white;
+}
+
+.benefit-card-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #111827;
+  margin: 0 0 1rem 0;
+}
+
+.benefit-card-description {
+  color: #4b5563;
+  line-height: 1.625;
+  margin: 0;
+  font-size: 1rem;
+}
+
+/* ================================================
+   WHY JOIN SECTION - Desktop
+   ================================================ */
+
+.why-join-section {
+  background-color: white;
+  border-radius: 1.5rem;
+  padding: 3rem;
+  margin-bottom: 5rem;
+  box-shadow:
+    0 20px 25px -5px rgba(0, 0, 0, 0.1),
+    0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  border: 1px solid #f3f4f6;
+}
+
+.why-join-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+.why-join-title {
+  font-size: 1.875rem;
+  font-weight: 700;
+  color: #111827;
+  margin: 0 0 1.5rem 0;
+}
+
+.why-join-text {
+  color: #4b5563;
+  line-height: 1.625;
+  margin: 0 0 1.5rem 0;
+  font-size: 1rem;
+}
+
+.why-join-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.list-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+}
+
+.list-icon {
+  width: 1.5rem;
+  height: 1.5rem;
+  color: #16a34a;
+  flex-shrink: 0;
+  margin-top: 0.125rem;
+}
+
+.list-text {
+  color: #374151;
+  line-height: 1.625;
+  font-size: 1rem;
+}
+
+.why-join-image {
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.why-join-image:hover {
+  transform: scale(1.02);
+}
+
+.why-join-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* ================================================
+   GLOBAL REACH SECTION - Desktop
+   ================================================ */
+
+.global-reach-section {
+  background: linear-gradient(to bottom right, #111827, #1f2937);
+  border-radius: 1.5rem;
+  padding: 3rem;
+  color: white;
+}
+
+.global-reach-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.global-reach-title {
+  font-size: 1.875rem;
+  font-weight: 700;
+  margin: 0 0 1rem 0;
+}
+
+.global-reach-description {
+  color: #d1d5db;
+  max-width: 42rem;
+  margin: 0 auto;
+  line-height: 1.625;
+  font-size: 1rem;
+}
+
+.countries-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1rem;
+  margin-bottom: 3rem;
+}
+
+.country-card {
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(8px);
+  border-radius: 0.5rem;
+  padding: 1rem;
+  text-align: center;
+  transition: all 0.2s ease;
+  cursor: default;
+}
+
+.country-card:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  transform: translateY(-2px);
+}
+
+.country-icon {
+  width: 1.5rem;
+  height: 1.5rem;
+  color: #4ade80;
+  margin: 0 auto 0.5rem auto;
+}
+
+.country-name {
+  font-size: 0.875rem;
+  font-weight: 500;
+  margin: 0;
+}
+
+.global-reach-footer {
+  text-align: center;
+}
+
+.footer-text {
+  color: #d1d5db;
+  margin: 0 0 1.5rem 0;
+  font-size: 1rem;
+}
+
+/* ================================================
+   CTA SECTION - Desktop
+   ================================================ */
+
+.diaspora-cta {
+  margin-top: 5rem;
+  text-align: center;
+}
+
+.cta-content {
+  background: linear-gradient(to right, #16a34a, #2563eb);
+  border-radius: 1.5rem;
+  padding: 3rem;
+}
+
+.cta-title {
+  font-size: 1.875rem;
+  font-weight: 700;
+  color: white;
+  margin: 0 0 1rem 0;
+}
+
+.cta-description {
+  color: #dcfce7;
+  font-size: 1.125rem;
+  margin: 0 auto 2rem auto;
+  max-width: 42rem;
+  line-height: 1.75;
+}
+
+.cta-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.cta-button {
+  padding: 1rem 2rem;
+  border-radius: 0.5rem;
+  transition: all 0.2s ease;
+  font-weight: 500;
+  cursor: pointer;
+  font-size: 1rem;
+  border: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.cta-button-primary {
+  background-color: white;
+  color: #16a34a;
+}
+
+.cta-button-primary:hover {
+  background-color: #f0fdf4;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.cta-button-secondary {
+  background-color: transparent;
+  color: white;
+  border: 2px solid white;
+}
+
+.cta-button-secondary:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.button-icon {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.cta-button:active {
+  transform: translateY(0);
+}
+
+.cta-button:focus-visible {
+  outline: 2px solid white;
+  outline-offset: 2px;
+}
+
+/* ================================================
+   RESPONSIVE DESIGN - DESKTOP FIRST
+   ================================================ */
+
+/* Large Tablets and Small Laptops (max-width: 1024px) */
+@media (max-width: 1024px) {
+  .diaspora-container {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+
+  .diaspora-title {
+    font-size: 2.5rem;
+  }
+
+  .benefits-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .why-join-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .countries-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Tablets (max-width: 768px) */
+@media (max-width: 768px) {
+  .diaspora-section {
+    padding: 4rem 0;
+  }
+
+  .diaspora-container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .diaspora-header {
+    margin-bottom: 3rem;
+  }
+
+  .diaspora-title {
+    font-size: 2rem;
+  }
+
+  .diaspora-description {
+    font-size: 1.125rem;
+  }
+
+  .hero-image {
+    height: 20rem;
+  }
+
+  .diaspora-hero-image {
+    margin-bottom: 3rem;
+  }
+
+  .benefits-section {
+    margin-bottom: 3rem;
+  }
+
+  .benefits-title {
+    font-size: 1.5rem;
+  }
+
+  .benefit-card {
+    padding: 1.5rem;
+  }
+
+  .benefit-card-title {
+    font-size: 1.25rem;
+  }
+
+  .why-join-section {
+    padding: 2rem;
+    margin-bottom: 3rem;
+  }
+
+  .why-join-title {
+    font-size: 1.5rem;
+  }
+
+  .global-reach-section {
+    padding: 2rem;
+  }
+
+  .global-reach-title {
+    font-size: 1.5rem;
+  }
+
+  .countries-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .diaspora-cta {
+    margin-top: 3rem;
+  }
+
+  .cta-content {
+    padding: 2rem;
+  }
+
+  .cta-title {
+    font-size: 1.5rem;
+  }
+
+  .cta-description {
+    font-size: 1rem;
+  }
+}
+
+/* Mobile Devices (max-width: 480px) */
+@media (max-width: 480px) {
+  .diaspora-section {
+    padding: 3rem 0;
+  }
+
+  .diaspora-header {
+    margin-bottom: 2rem;
+  }
+
+  .diaspora-title {
+    font-size: 1.75rem;
+  }
+
+  .diaspora-description {
+    font-size: 1rem;
+  }
+
+  .hero-image {
+    height: 16rem;
+  }
+
+  .diaspora-hero-image {
+    margin-bottom: 2rem;
+  }
+
+  .benefits-section {
+    margin-bottom: 2rem;
+  }
+
+  .benefits-title {
+    font-size: 1.25rem;
+  }
+
+  .benefit-card {
+    padding: 1.25rem;
+  }
+
+  .benefit-icon {
+    width: 3rem;
+    height: 3rem;
+  }
+
+  .benefit-icon .icon {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+
+  .benefit-card-title {
+    font-size: 1.125rem;
+  }
+
+  .benefit-card-description {
+    font-size: 0.9375rem;
+  }
+
+  .why-join-section {
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .why-join-title {
+    font-size: 1.25rem;
+  }
+
+  .why-join-text {
+    font-size: 0.9375rem;
+  }
+
+  .list-text {
+    font-size: 0.9375rem;
+  }
+
+  .global-reach-section {
+    padding: 1.5rem;
+  }
+
+  .global-reach-title {
+    font-size: 1.25rem;
+  }
+
+  .global-reach-description {
+    font-size: 0.9375rem;
+  }
+
+  .countries-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .diaspora-cta {
+    margin-top: 2rem;
+  }
+
+  .cta-content {
+    padding: 1.5rem;
+  }
+
+  .cta-title {
+    font-size: 1.25rem;
+  }
+
+  .cta-description {
+    font-size: 0.9375rem;
+  }
+
+  .cta-button {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+/* Extra Large Desktops (min-width: 1440px) */
+@media (min-width: 1440px) {
+  .diaspora-container {
+    max-width: 1536px;
+  }
+
+  .diaspora-title {
+    font-size: 3.5rem;
+  }
+
+  .hero-image {
+    height: 28rem;
+  }
+}
+
+/* ================================================
+   ACCESSIBILITY
+   ================================================ */
+
+/* Reduce motion */
+@media (prefers-reduced-motion: reduce) {
+  .diaspora-badge,
+  .diaspora-hero-image,
+  .benefit-card,
+  .country-card,
+  .cta-button,
+  .why-join-image {
+    transition: none;
+    animation: none;
+  }
+
+  .diaspora-badge:hover,
+  .diaspora-hero-image:hover,
+  .benefit-card:hover,
+  .country-card:hover,
+  .cta-button:hover,
+  .why-join-image:hover {
+    transform: none;
+  }
+}
+
+/* High contrast mode */
+@media (prefers-contrast: high) {
+  .benefit-card,
+  .why-join-section,
+  .country-card {
+    border-width: 2px;
+  }
+
+  .cta-button-secondary {
+    border-width: 3px;
+  }
+}
+
+/* ================================================
+   PRINT STYLES
+   ================================================ */
+
+@media print {
+  .diaspora-section {
+    padding: 2rem 0;
+    background: white;
+  }
+
+  .cta-buttons,
+  .diaspora-hero-image {
+    display: none;
+  }
+
+  .benefits-grid,
+  .countries-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .why-join-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .global-reach-section {
+    background: white;
+    color: black;
+    border: 2px solid #e5e7eb;
+  }
+
+  .global-reach-title {
+    color: black;
+  }
+
+  .global-reach-description,
+  .footer-text {
+    color: #4b5563;
+  }
+
+  .country-card {
+    background: #f3f4f6;
+  }
+}
+
+/* ================================================
+   DARK MODE SUPPORT (Optional)
+   ================================================ */
+
+@media (prefers-color-scheme: dark) {
+  .diaspora-section {
+    background: linear-gradient(to bottom right, #064e3b, #1f2937, #1e3a8a);
+  }
+
+  .diaspora-title {
+    color: #f9fafb;
+  }
+
+  .diaspora-description,
+  .benefits-subtitle {
+    color: #d1d5db;
+  }
+
+  .benefit-card,
+  .why-join-section {
+    background-color: #1f2937;
+    border-color: #374151;
+  }
+
+  .benefit-card-title,
+  .why-join-title {
+    color: #f9fafb;
+  }
+
+  .benefit-card-description,
+  .why-join-text,
+  .list-text {
+    color: #d1d5db;
+  }
+}
+
+/* ================================================
+   ANIMATION ENHANCEMENTS
+   ================================================ */
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.benefit-card {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+.benefit-card:nth-child(1) {
+  animation-delay: 0.1s;
+}
+
+.benefit-card:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.benefit-card:nth-child(3) {
+  animation-delay: 0.3s;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .benefit-card {
+    animation: none;
+  }
+}
+
+/* ================================================
+   LOADING STATES
+   ================================================ */
+
+.cta-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.cta-button:disabled:hover {
+  transform: none;
+  box-shadow: none;
+}

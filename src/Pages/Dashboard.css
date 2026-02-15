@@ -1,0 +1,1209 @@
+/* ================================================
+   ENHANCED DASHBOARD STYLES
+   Desktop-First Approach
+   With Membership Cards & Upgrade Dialog
+   ================================================ */
+
+/* Base Page - Desktop */
+.dashboard-page {
+  min-height: 100vh;
+  background: linear-gradient(to bottom right, #f0fdf4, #ffffff);
+}
+
+/* ================================================
+   HEADER SECTION - Desktop
+   ================================================ */
+
+.dashboard-header {
+  background-color: white;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.dashboard-header-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 1.5rem 2rem;
+}
+
+.dashboard-header-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.dashboard-logo-section {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.dashboard-logo {
+  width: 3rem;
+  height: 3rem;
+  background: linear-gradient(to bottom right, #16a34a, #15803d);
+  border-radius: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.logo-text {
+  color: white;
+  font-weight: 700;
+  font-size: 1.25rem;
+}
+
+.dashboard-main-title {
+  font-size: 1.5rem;
+  color: #111827;
+  font-weight: 600;
+  margin: 0;
+}
+
+.dashboard-subtitle {
+  font-size: 0.875rem;
+  color: #4b5563;
+  margin: 0;
+}
+
+.logout-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.625rem 1.25rem;
+  background-color: white;
+  border: 1px solid #d1d5db;
+  border-radius: 0.375rem;
+  color: #374151;
+  font-size: 0.9375rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-weight: 500;
+}
+
+.logout-button:hover {
+  background-color: #fef2f2;
+  border-color: #fca5a5;
+  color: #dc2626;
+}
+
+.button-icon {
+  width: 1rem;
+  height: 1rem;
+}
+
+/* ================================================
+   MAIN CONTENT - Desktop
+   ================================================ */
+
+.dashboard-main {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+/* ================================================
+   STATUS BANNER - Desktop
+   ================================================ */
+
+.status-banner {
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.status-banner.bg-purple {
+  background: linear-gradient(to right, #9333ea, #7c3aed);
+}
+
+.status-banner.bg-amber {
+  background: linear-gradient(to right, #d97706, #b45309);
+}
+
+.status-banner.bg-green {
+  background: linear-gradient(to right, #16a34a, #15803d);
+}
+
+.status-banner.bg-blue {
+  background: linear-gradient(to right, #2563eb, #1d4ed8);
+}
+
+.status-banner.bg-gray {
+  background: linear-gradient(to right, #4b5563, #374151);
+}
+
+.status-banner-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.welcome-title {
+  font-size: 1.5rem;
+  color: white;
+  margin: 0 0 0.5rem 0;
+  font-weight: 600;
+}
+
+.status-text {
+  color: rgba(255, 255, 255, 0.9);
+  margin: 0;
+  font-size: 1rem;
+}
+
+.status-value {
+  font-weight: 600;
+}
+
+.status-icon-section {
+  text-align: right;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.5rem;
+}
+
+.status-icon {
+  width: 4rem;
+  height: 4rem;
+  color: white;
+}
+
+.status-badge {
+  display: inline-block;
+  padding: 0.375rem 0.875rem;
+  border-radius: 0.375rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: white;
+}
+
+.badge-purple {
+  background-color: #9333ea;
+}
+
+.badge-amber {
+  background-color: #d97706;
+}
+
+.badge-green {
+  background-color: #16a34a;
+}
+
+.badge-blue {
+  background-color: #2563eb;
+}
+
+.badge-gray {
+  background-color: #4b5563;
+}
+
+/* ================================================
+   DASHBOARD GRID - Desktop
+   ================================================ */
+
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 2rem;
+}
+
+.profile-section {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.sidebar-section {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* ================================================
+   CARD COMPONENT - Desktop
+   ================================================ */
+
+.card {
+  background-color: white;
+  border-radius: 0.5rem;
+  border: 1px solid #dcfce7;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.border-purple {
+  border-color: #e9d5ff;
+}
+
+.border-amber {
+  border-color: #fef3c7;
+}
+
+.border-green {
+  border-color: #dcfce7;
+}
+
+.border-blue {
+  border-color: #dbeafe;
+}
+
+.border-gray {
+  border-color: #e5e7eb;
+}
+
+.card-header {
+  background: linear-gradient(to right, #f0fdf4, #ffffff);
+  padding: 1.5rem;
+  border-bottom: 1px solid #e5e7eb;
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+}
+
+.card-header-with-button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+}
+
+.card-title {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #111827;
+  font-size: 1.125rem;
+  font-weight: 700;
+  margin: 0 0 0.5rem 0;
+}
+
+.title-icon {
+  width: 1.25rem;
+  height: 1.25rem;
+  color: #16a34a;
+}
+
+.card-description {
+  color: #6b7280;
+  font-size: 0.875rem;
+  margin: 0;
+}
+
+.card-content {
+  padding: 1.5rem;
+}
+
+.print-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.375rem 0.875rem;
+  background-color: white;
+  border: 1px solid #bbf7d0;
+  border-radius: 0.375rem;
+  color: #374151;
+  font-size: 0.875rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-weight: 500;
+}
+
+.print-button:hover {
+  background-color: #f0fdf4;
+  border-color: #16a34a;
+}
+
+/* ================================================
+   MEMBERSHIP CARD - Desktop
+   ================================================ */
+
+.membership-card-container {
+  /* Specific styles applied via colors.border */
+}
+
+.membership-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 0.75rem;
+  padding: 2rem;
+  color: white;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  width: 100%;
+  max-width: 500px;
+}
+
+.card-purple {
+  background: linear-gradient(to bottom right, #9333ea, #6b21a8);
+}
+
+.card-amber {
+  background: linear-gradient(to bottom right, #d97706, #92400e);
+}
+
+.card-green {
+  background: linear-gradient(to bottom right, #16a34a, #166534);
+}
+
+.card-blue {
+  background: linear-gradient(to bottom right, #2563eb, #1e3a8a);
+}
+
+.card-gray {
+  background: linear-gradient(to bottom right, #4b5563, #1f2937);
+}
+
+.card-decoration {
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+}
+
+.card-decoration-1 {
+  top: 0;
+  right: 0;
+  width: 16rem;
+  height: 16rem;
+  margin-right: -8rem;
+  margin-top: -8rem;
+}
+
+.card-decoration-2 {
+  bottom: 0;
+  left: 0;
+  width: 12rem;
+  height: 12rem;
+  margin-left: -6rem;
+  margin-bottom: -6rem;
+}
+
+.card-content-inner {
+  position: relative;
+  z-index: 10;
+}
+
+.card-header-section {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+}
+
+.card-logo-section {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.card-logo {
+  width: 3.5rem;
+  height: 3.5rem;
+  background-color: white;
+  border-radius: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-logo-text {
+  color: #16a34a;
+  font-weight: 700;
+  font-size: 1.25rem;
+}
+
+.card-org-name {
+  font-weight: 700;
+  font-size: 1.125rem;
+  line-height: 1.2;
+}
+
+.card-org-subtitle {
+  font-size: 0.875rem;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.card-tier-badge {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(8px);
+  padding: 0.25rem 0.75rem;
+  border-radius: 0.375rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+.card-member-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+}
+
+.card-label {
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.7);
+  margin-bottom: 0.25rem;
+}
+
+.card-value-large {
+  font-weight: 700;
+  font-size: 1.25rem;
+}
+
+.card-info-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.card-value-mono {
+  font-family: monospace;
+  font-size: 0.875rem;
+}
+
+.card-value {
+  font-size: 0.875rem;
+}
+
+.card-value-mono-small {
+  font-family: monospace;
+  font-size: 0.75rem;
+}
+
+.card-footer-section {
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  padding-top: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.75rem;
+}
+
+.card-valid-date {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.card-verified {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.card-verified-icon {
+  width: 0.75rem;
+  height: 0.75rem;
+}
+
+/* ================================================
+   PROFILE CARD - Desktop
+   ================================================ */
+
+.profile-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.profile-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.field-label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+  color: #6b7280;
+}
+
+.field-icon {
+  width: 1rem;
+  height: 1rem;
+}
+
+.field-value {
+  color: #111827;
+  margin: 0;
+  padding-left: 1.5rem;
+  font-size: 0.9375rem;
+}
+
+.capitalize {
+  text-transform: capitalize;
+}
+
+.certificate-number {
+  font-family: "Courier New", Courier, monospace;
+  font-size: 0.875rem;
+}
+
+.separator {
+  height: 1px;
+  background-color: #e5e7eb;
+  margin: 1.5rem 0;
+}
+
+.membership-status-box {
+  border-radius: 0.5rem;
+  padding: 1rem;
+}
+
+.bg-purple-light {
+  background: linear-gradient(to right, rgba(147, 51, 234, 0.1), transparent);
+}
+
+.bg-amber-light {
+  background: linear-gradient(to right, rgba(217, 119, 6, 0.1), transparent);
+}
+
+.bg-green-light {
+  background: linear-gradient(to right, rgba(22, 163, 74, 0.1), transparent);
+}
+
+.bg-blue-light {
+  background: linear-gradient(to right, rgba(37, 99, 235, 0.1), transparent);
+}
+
+.bg-gray-light {
+  background: linear-gradient(to right, rgba(75, 85, 99, 0.1), transparent);
+}
+
+.membership-status-title {
+  font-weight: 600;
+  color: #111827;
+  margin: 0 0 0.5rem 0;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.9375rem;
+}
+
+.membership-icon {
+  width: 1rem;
+  height: 1rem;
+}
+
+.membership-status-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.status-label {
+  color: #374151;
+  font-size: 0.9375rem;
+}
+
+.status-badge-small {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  border-radius: 0.25rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: white;
+}
+
+/* ================================================
+   BENEFITS CARD - Desktop
+   ================================================ */
+
+.benefits-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.benefit-item-full {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 1rem;
+  background-color: white;
+  border: 1px solid #f3f4f6;
+  border-radius: 0.5rem;
+  transition: all 0.2s ease;
+}
+
+.benefit-item-full:hover {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  transform: translateY(-1px);
+}
+
+.benefit-icon {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.icon-bg-blue {
+  background-color: #dbeafe;
+}
+
+.icon-bg-green {
+  background-color: #dcfce7;
+}
+
+.icon-bg-purple {
+  background-color: #e9d5ff;
+}
+
+.icon {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.icon-blue {
+  color: #2563eb;
+}
+
+.icon-green {
+  color: #16a34a;
+}
+
+.icon-purple {
+  color: #9333ea;
+}
+
+.icon-amber {
+  color: #d97706;
+}
+
+.benefit-content {
+  flex: 1;
+}
+
+.benefit-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.benefit-title {
+  font-weight: 600;
+  color: #111827;
+  margin: 0;
+  font-size: 0.9375rem;
+}
+
+.benefit-badge {
+  display: inline-block;
+  padding: 0.125rem 0.5rem;
+  border-radius: 0.25rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  border: 1px solid;
+}
+
+.badge-outline-blue {
+  background-color: #dbeafe;
+  color: #1e40af;
+  border-color: #bfdbfe;
+}
+
+.badge-outline-green {
+  background-color: #dcfce7;
+  color: #166534;
+  border-color: #bbf7d0;
+}
+
+.badge-outline-purple {
+  background-color: #e9d5ff;
+  color: #7c3aed;
+  border-color: #d8b4fe;
+}
+
+.badge-outline-amber {
+  background-color: #fef3c7;
+  color: #92400e;
+  border-color: #fde68a;
+}
+
+.benefit-description {
+  font-size: 0.875rem;
+  color: #6b7280;
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* ================================================
+   QUICK ACTIONS - Desktop
+   ================================================ */
+
+.actions-card .card-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.action-button {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 0.5rem;
+  padding: 0.75rem 1rem;
+  border-radius: 0.375rem;
+  font-size: 0.9375rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border: none;
+}
+
+.action-upgrade {
+  background: linear-gradient(to right, #d97706, #b45309);
+  color: white;
+}
+
+.action-upgrade:hover {
+  background: linear-gradient(to right, #b45309, #92400e);
+  transform: translateY(-1px);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.action-primary {
+  background-color: #16a34a;
+  color: white;
+}
+
+.action-primary:hover {
+  background-color: #15803d;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.action-secondary {
+  background-color: white;
+  color: #374151;
+  border: 1px solid #bbf7d0;
+}
+
+.action-secondary:hover {
+  background-color: #f0fdf4;
+  border-color: #16a34a;
+  transform: translateY(-1px);
+}
+
+.action-button:active {
+  transform: translateY(0);
+}
+
+/* ================================================
+   TIER INFO CARD - Desktop
+   ================================================ */
+
+.tier-info-card {
+  border-color: #fef3c7;
+  background-color: #fefce8;
+}
+
+.tier-info-card .card-header {
+  background: linear-gradient(to right, #fef9c3, #fefce8);
+}
+
+.tier-title {
+  color: #78350f;
+}
+
+.tier-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.tier-current {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.tier-label {
+  font-size: 0.875rem;
+  color: #92400e;
+}
+
+.tier-separator {
+  height: 1px;
+  background-color: #fde68a;
+}
+
+.tier-description {
+  font-size: 0.875rem;
+  color: #92400e;
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* ================================================
+   UPGRADE DIALOG - Desktop
+   ================================================ */
+
+.dialog-overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 1rem;
+}
+
+.dialog-content {
+  background-color: white;
+  border-radius: 0.5rem;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  width: 100%;
+  max-width: 425px;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+.dialog-header {
+  padding: 1.5rem;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.dialog-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #111827;
+  margin: 0 0 0.5rem 0;
+}
+
+.dialog-description {
+  font-size: 0.875rem;
+  color: #6b7280;
+  margin: 0;
+}
+
+.dialog-body {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.upgrade-option {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 1rem;
+  background-color: white;
+  border: 2px solid #f3f4f6;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.upgrade-option:hover {
+  border-color: #16a34a;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.upgrade-option.selected {
+  border-color: #16a34a;
+  background-color: #f0fdf4;
+}
+
+.upgrade-icon {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.icon-bg-amber {
+  background-color: #fef3c7;
+}
+
+.upgrade-content {
+  flex: 1;
+}
+
+.upgrade-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.upgrade-title {
+  font-weight: 600;
+  color: #111827;
+  margin: 0;
+  font-size: 0.9375rem;
+}
+
+.upgrade-description {
+  font-size: 0.875rem;
+  color: #6b7280;
+  margin: 0;
+  line-height: 1.5;
+}
+
+.dialog-footer {
+  padding: 1.5rem;
+  border-top: 1px solid #e5e7eb;
+  display: flex;
+  gap: 0.75rem;
+}
+
+.dialog-button {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.625rem 1rem;
+  border-radius: 0.375rem;
+  font-size: 0.9375rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border: none;
+}
+
+.dialog-button-cancel {
+  background-color: white;
+  color: #374151;
+  border: 1px solid #e5e7eb;
+}
+
+.dialog-button-cancel:hover {
+  background-color: #f9fafb;
+}
+
+.dialog-button-confirm {
+  background-color: #16a34a;
+  color: white;
+}
+
+.dialog-button-confirm:hover {
+  background-color: #15803d;
+}
+
+.dialog-button-confirm:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.spinner {
+  width: 1rem;
+  height: 1rem;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-top-color: white;
+  border-radius: 50%;
+  animation: spin 0.6s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* ================================================
+   SUCCESS ALERT - Desktop
+   ================================================ */
+
+.success-alert {
+  position: fixed;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  max-width: 1280px;
+  width: calc(100% - 2rem);
+  background-color: #dcfce7;
+  border: 1px solid #16a34a;
+  border-radius: 0.5rem;
+  padding: 1rem 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  z-index: 1001;
+  animation: slideUp 0.3s ease-out;
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateX(-50%) translateY(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(-50%) translateY(0);
+    opacity: 1;
+  }
+}
+
+.success-alert .alert-icon {
+  width: 1.25rem;
+  height: 1.25rem;
+  color: #16a34a;
+  flex-shrink: 0;
+}
+
+.success-alert .alert-message {
+  color: #166534;
+  font-size: 0.9375rem;
+  margin: 0;
+}
+
+/* ================================================
+   RESPONSIVE DESIGN - DESKTOP FIRST
+   ================================================ */
+
+/* Large Tablets (max-width: 1024px) */
+@media (max-width: 1024px) {
+  .dashboard-main {
+    padding: 1.5rem;
+  }
+
+  .dashboard-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .profile-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .membership-card {
+    max-width: 100%;
+  }
+}
+
+/* Tablets (max-width: 768px) */
+@media (max-width: 768px) {
+  .dashboard-header-container {
+    padding: 1rem;
+  }
+
+  .dashboard-header-content {
+    flex-direction: column;
+    gap: 1rem;
+    align-items: flex-start;
+  }
+
+  .logout-button {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .dashboard-main {
+    padding: 1rem;
+  }
+
+  .status-banner {
+    padding: 1.25rem;
+  }
+
+  .status-banner-content {
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+  }
+
+  .status-icon-section {
+    align-items: center;
+  }
+
+  .status-icon {
+    width: 3rem;
+    height: 3rem;
+  }
+
+  .card-header-with-button {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
+
+  .print-button {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .membership-card {
+    padding: 1.5rem;
+  }
+
+  .card-info-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Mobile (max-width: 480px) */
+@media (max-width: 480px) {
+  .dashboard-main {
+    padding: 0.75rem;
+  }
+
+  .status-banner {
+    padding: 1rem;
+  }
+
+  .welcome-title {
+    font-size: 1.25rem;
+  }
+
+  .membership-card {
+    padding: 1.25rem;
+  }
+
+  .card-logo {
+    width: 3rem;
+    height: 3rem;
+  }
+
+  .card-org-name {
+    font-size: 1rem;
+  }
+
+  .benefit-item-full {
+    flex-direction: column;
+  }
+
+  .action-button {
+    padding: 0.625rem 0.875rem;
+    font-size: 0.875rem;
+  }
+
+  .dialog-content {
+    max-width: 100%;
+  }
+}
+
+/* Print Styles */
+@media print {
+  .dashboard-header,
+  .sidebar-section,
+  .logout-button,
+  .print-button,
+  .action-button {
+    display: none;
+  }
+
+  .dashboard-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .membership-card {
+    page-break-inside: avoid;
+  }
+}

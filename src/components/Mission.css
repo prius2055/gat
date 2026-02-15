@@ -1,0 +1,125 @@
+/* SECTION */
+.mission-section {
+  padding: 3rem 1.5rem;
+  background: #ffffff;
+}
+
+.mission-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* HEADER */
+.mission-header {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 4rem auto;
+}
+
+.mission-tag {
+  color: #16a34a;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  letter-spacing: 1px;
+}
+
+.mission-title {
+  font-size: 2.6rem;
+  font-weight: 700;
+  margin-top: 1rem;
+  color: #111827;
+}
+
+.mission-subtitle {
+  margin-top: 1.5rem;
+  font-size: 1.1rem;
+  color: #4b5563;
+  line-height: 1.7;
+}
+
+/* GRID */
+.mission-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+}
+
+/* RESPONSIVE */
+@media (max-width: 1024px) {
+  .mission-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .mission-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* CARD */
+.mission-card {
+  padding: 2rem;
+  border-radius: 16px;
+  border: 1px solid #e5e7eb;
+  background: linear-gradient(to bottom right, #f0fdf4, #ffffff);
+  transition: 0.3s ease;
+}
+
+.mission-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.08);
+  border-color: #16a34a;
+}
+
+.mission-card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.6rem;
+  font-weight: 700;
+  color: #111827;
+}
+
+.mission-card p {
+  color: #4b5563;
+  line-height: 1.6;
+}
+
+/* ICON */
+.mission-icon {
+  width: 56px;
+  height: 56px;
+  background: #16a34a;
+  color: white;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+  transition: 0.3s;
+}
+
+.mission-card:hover .mission-icon {
+  transform: scale(1.1);
+}
+
+/* QUOTE */
+.mission-quote {
+  margin-top: 5rem;
+  padding: 3rem;
+  border-radius: 20px;
+  background: linear-gradient(90deg, #16a34a, #15803d);
+  text-align: center;
+  color: white;
+}
+
+.mission-quote blockquote {
+  font-size: 1.6rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.mission-quote p {
+  color: #d1fae5;
+  font-size: 1rem;
+}

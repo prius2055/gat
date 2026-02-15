@@ -1,0 +1,571 @@
+/* ================================================
+   INITIATIVES SECTION STYLES
+   Desktop-First Approach
+   ================================================ */
+
+/* Base Section - Desktop */
+.initiatives-section {
+  padding: 6rem 0;
+  background-color: #f9fafb;
+}
+
+.initiatives-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+/* ================================================
+   SECTION HEADER - Desktop
+   ================================================ */
+
+.initiatives-header {
+  text-align: center;
+  max-width: 48rem;
+  margin: 0 auto 4rem auto;
+}
+
+.initiatives-badge {
+  color: #16a34a;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-size: 0.875rem;
+  display: inline-block;
+}
+
+.initiatives-title {
+  margin-top: 1rem;
+  font-size: 3rem;
+  font-weight: 700;
+  color: #111827;
+  line-height: 1.2;
+}
+
+.initiatives-description {
+  margin-top: 1.5rem;
+  font-size: 1.25rem;
+  color: #4b5563;
+  line-height: 1.75;
+}
+
+/* ================================================
+   INITIATIVES GRID - Desktop
+   ================================================ */
+
+.initiatives-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.initiative-card {
+  border: none;
+  background-color: white;
+  border-radius: 1rem;
+  box-shadow:
+    0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+
+.initiative-card:hover {
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  transform: translateY(-4px);
+}
+
+.initiative-content {
+  padding: 2rem;
+}
+
+/* Initiative Icons */
+.initiative-icon {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+.initiative-icon.initiative-blue {
+  background: linear-gradient(to bottom right, #3b82f6, #2563eb);
+}
+
+.initiative-icon.initiative-green {
+  background: linear-gradient(to bottom right, #22c55e, #16a34a);
+}
+
+.initiative-icon.initiative-purple {
+  background: linear-gradient(to bottom right, #a855f7, #9333ea);
+}
+
+.initiative-icon.initiative-red {
+  background: linear-gradient(to bottom right, #ef4444, #dc2626);
+}
+
+.initiative-icon.initiative-emerald {
+  background: linear-gradient(to bottom right, #10b981, #059669);
+}
+
+.initiative-icon.initiative-indigo {
+  background: linear-gradient(to bottom right, #6366f1, #4f46e5);
+}
+
+.initiative-icon .icon {
+  width: 2rem;
+  height: 2rem;
+  color: white;
+}
+
+/* Initiative Text */
+.initiative-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #111827;
+  margin: 0 0 0.75rem 0;
+}
+
+.initiative-description {
+  color: #4b5563;
+  line-height: 1.625;
+  margin: 0;
+  font-size: 1rem;
+}
+
+/* ================================================
+   CTA SECTION - Desktop
+   ================================================ */
+
+.initiatives-cta {
+  margin-top: 5rem;
+  text-align: center;
+}
+
+.cta-card {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  background-color: white;
+  border-radius: 1rem;
+  padding: 2rem;
+  box-shadow:
+    0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  max-width: 100%;
+}
+
+.cta-text {
+  font-size: 1.125rem;
+  color: #374151;
+  max-width: 42rem;
+  margin: 0;
+  line-height: 1.75;
+}
+
+.cta-button {
+  background-color: #16a34a;
+  color: white;
+  padding: 1rem 2rem;
+  border-radius: 0.5rem;
+  transition: all 0.2s ease;
+  font-weight: 500;
+  cursor: pointer;
+  font-size: 1rem;
+  border: none;
+}
+
+.cta-button:hover {
+  background-color: #15803d;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.cta-button:active {
+  transform: translateY(0);
+}
+
+.cta-button:focus-visible {
+  outline: 2px solid #16a34a;
+  outline-offset: 2px;
+}
+
+/* ================================================
+   RESPONSIVE DESIGN - DESKTOP FIRST
+   ================================================ */
+
+/* Large Tablets and Small Laptops (max-width: 1024px) */
+@media (max-width: 1024px) {
+  .initiatives-container {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+
+  .initiatives-title {
+    font-size: 2.5rem;
+  }
+
+  .initiatives-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+}
+
+/* Tablets (max-width: 768px) */
+@media (max-width: 768px) {
+  .initiatives-section {
+    padding: 4rem 0;
+  }
+
+  .initiatives-container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .initiatives-header {
+    margin-bottom: 3rem;
+  }
+
+  .initiatives-title {
+    font-size: 2rem;
+  }
+
+  .initiatives-description {
+    font-size: 1.125rem;
+  }
+
+  .initiatives-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .initiative-content {
+    padding: 1.5rem;
+  }
+
+  .initiatives-cta {
+    margin-top: 3rem;
+  }
+
+  .cta-card {
+    padding: 1.5rem;
+  }
+
+  .cta-text {
+    font-size: 1rem;
+  }
+}
+
+/* Mobile Devices (max-width: 480px) */
+@media (max-width: 480px) {
+  .initiatives-section {
+    padding: 3rem 0;
+  }
+
+  .initiatives-header {
+    margin-bottom: 2rem;
+  }
+
+  .initiatives-title {
+    font-size: 1.75rem;
+  }
+
+  .initiatives-description {
+    font-size: 1rem;
+  }
+
+  .initiatives-grid {
+    gap: 1.25rem;
+  }
+
+  .initiative-content {
+    padding: 1.25rem;
+  }
+
+  .initiative-icon {
+    width: 3rem;
+    height: 3rem;
+    margin-bottom: 1rem;
+  }
+
+  .initiative-icon .icon {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+
+  .initiative-title {
+    font-size: 1.125rem;
+  }
+
+  .initiative-description {
+    font-size: 0.9375rem;
+  }
+
+  .initiatives-cta {
+    margin-top: 2rem;
+  }
+
+  .cta-card {
+    padding: 1.25rem;
+  }
+
+  .cta-text {
+    font-size: 0.9375rem;
+  }
+
+  .cta-button {
+    width: 100%;
+  }
+}
+
+/* Extra Large Desktops (min-width: 1440px) */
+@media (min-width: 1440px) {
+  .initiatives-container {
+    max-width: 1536px;
+  }
+
+  .initiatives-title {
+    font-size: 3.5rem;
+  }
+
+  .initiatives-grid {
+    gap: 2.5rem;
+  }
+}
+
+/* ================================================
+   ACCESSIBILITY
+   ================================================ */
+
+/* Reduce motion */
+@media (prefers-reduced-motion: reduce) {
+  .initiative-card,
+  .cta-button {
+    transition: none;
+    animation: none;
+  }
+
+  .initiative-card:hover,
+  .cta-button:hover {
+    transform: none;
+  }
+}
+
+/* High contrast mode */
+@media (prefers-contrast: high) {
+  .initiative-card,
+  .cta-card {
+    border: 2px solid #e5e7eb;
+  }
+}
+
+/* ================================================
+   PRINT STYLES
+   ================================================ */
+
+@media print {
+  .initiatives-section {
+    padding: 2rem 0;
+    background: white;
+  }
+
+  .initiatives-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .cta-button {
+    display: none;
+  }
+
+  .initiative-card {
+    page-break-inside: avoid;
+  }
+}
+
+/* ================================================
+   DARK MODE SUPPORT (Optional)
+   ================================================ */
+
+@media (prefers-color-scheme: dark) {
+  .initiatives-section {
+    background-color: #111827;
+  }
+
+  .initiatives-title {
+    color: #f9fafb;
+  }
+
+  .initiatives-description {
+    color: #d1d5db;
+  }
+
+  .initiative-card,
+  .cta-card {
+    background-color: #1f2937;
+  }
+
+  .initiative-title {
+    color: #f9fafb;
+  }
+
+  .initiative-description {
+    color: #d1d5db;
+  }
+
+  .cta-text {
+    color: #d1d5db;
+  }
+}
+
+/* ================================================
+   ANIMATION ENHANCEMENTS
+   ================================================ */
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.initiative-card {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+.initiative-card:nth-child(1) {
+  animation-delay: 0.1s;
+}
+
+.initiative-card:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.initiative-card:nth-child(3) {
+  animation-delay: 0.3s;
+}
+
+.initiative-card:nth-child(4) {
+  animation-delay: 0.4s;
+}
+
+.initiative-card:nth-child(5) {
+  animation-delay: 0.5s;
+}
+
+.initiative-card:nth-child(6) {
+  animation-delay: 0.6s;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .initiative-card {
+    animation: none;
+  }
+}
+
+/* ================================================
+   LOADING STATES
+   ================================================ */
+
+.cta-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.cta-button:disabled:hover {
+  background-color: #16a34a;
+  transform: none;
+  box-shadow: none;
+}
+
+/* ================================================
+   HOVER EFFECTS ENHANCEMENTS
+   ================================================ */
+
+.initiative-card {
+  position: relative;
+}
+
+.initiative-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 1rem;
+  background: linear-gradient(
+    135deg,
+    transparent 0%,
+    rgba(22, 163, 74, 0.05) 100%
+  );
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.initiative-card:hover::before {
+  opacity: 1;
+}
+
+/* Icon pulse effect on hover */
+@keyframes iconPulse {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+.initiative-card:hover .initiative-icon {
+  animation: iconPulse 1s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .initiative-card:hover .initiative-icon {
+    animation: none;
+  }
+}
+
+/* ================================================
+   GRID AUTO-FIT ALTERNATIVE
+   ================================================ */
+
+/* For truly responsive grids without media queries (alternative approach) */
+.initiatives-grid-autofit {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+/* Use this class instead of .initiatives-grid if you prefer auto-fitting columns */
+
+/* ================================================
+   UTILITY CLASSES
+   ================================================ */
+
+.initiative-featured {
+  border: 2px solid #16a34a;
+  background: linear-gradient(135deg, #f0fdf4 0%, #ffffff 100%);
+}
+
+.initiative-new::after {
+  content: "New";
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background-color: #16a34a;
+  color: white;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}

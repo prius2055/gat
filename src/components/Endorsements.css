@@ -1,0 +1,875 @@
+/* ================================================
+   ENDORSEMENTS SECTION STYLES
+   Desktop-First Approach
+   ================================================ */
+
+/* Base Section - Desktop */
+.endorsements-section {
+  padding: 6rem 0;
+  background: linear-gradient(to bottom right, #f9fafb, #ffffff);
+}
+
+.endorsements-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+/* ================================================
+   SECTION HEADER - Desktop
+   ================================================ */
+
+.endorsements-header {
+  text-align: center;
+  max-width: 48rem;
+  margin: 0 auto 4rem auto;
+}
+
+.endorsements-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: #dbeafe;
+  color: #1d4ed8;
+  padding: 0.5rem 1rem;
+  border-radius: 9999px;
+  margin-bottom: 1rem;
+  transition: all 0.3s ease;
+}
+
+.endorsements-badge:hover {
+  background-color: #bfdbfe;
+  transform: translateY(-2px);
+}
+
+.badge-icon {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.badge-text {
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-size: 0.875rem;
+}
+
+.endorsements-title {
+  margin-top: 1rem;
+  font-size: 3rem;
+  font-weight: 700;
+  color: #111827;
+  line-height: 1.2;
+}
+
+.endorsements-description {
+  margin-top: 1.5rem;
+  font-size: 1.25rem;
+  color: #4b5563;
+  line-height: 1.75;
+}
+
+/* ================================================
+   TRUST BADGE - Desktop
+   ================================================ */
+
+.trust-badge {
+  background: linear-gradient(to right, #16a34a, #2563eb);
+  border-radius: 1.5rem;
+  padding: 3rem;
+  margin-bottom: 5rem;
+  text-align: center;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+}
+
+.trust-badge-content {
+  max-width: 64rem;
+  margin: 0 auto;
+}
+
+.trust-icon-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+}
+
+.trust-icon-circle {
+  width: 5rem;
+  height: 5rem;
+  background-color: white;
+  border-radius: 9999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+.trust-icon {
+  width: 3rem;
+  height: 3rem;
+  color: #16a34a;
+}
+
+.trust-title {
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: white;
+  margin: 0 0 1rem 0;
+}
+
+.trust-description {
+  color: #dcfce7;
+  font-size: 1.125rem;
+  margin: 0;
+  line-height: 1.75;
+}
+
+/* ================================================
+   ENDORSEMENTS GRID - Desktop
+   ================================================ */
+
+.endorsements-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  margin-bottom: 5rem;
+}
+
+.endorsement-card {
+  background-color: white;
+  border-radius: 1.5rem;
+  overflow: hidden;
+  box-shadow:
+    0 20px 25px -5px rgba(0, 0, 0, 0.1),
+    0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  border: 1px solid #f3f4f6;
+  transition: all 0.3s ease;
+}
+
+.endorsement-card:hover {
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  transform: translateY(-2px);
+}
+
+/* Certificate Image */
+.certificate-image-wrapper {
+  position: relative;
+  height: 30rem;
+  background-color: #f3f4f6;
+  overflow: hidden;
+}
+
+.certificate-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.endorsement-card:hover .certificate-image {
+  transform: scale(1.05);
+}
+
+.certificate-overlay {
+  /* position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.7),
+    rgba(0, 0, 0, 0.3),
+    transparent
+  ); */
+}
+
+.certificate-icon {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 9999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+.certificate-icon.endorsement-blue {
+  background: linear-gradient(to bottom right, #2563eb, #1d4ed8);
+}
+
+.certificate-icon.endorsement-green {
+  background: linear-gradient(to bottom right, #16a34a, #15803d);
+}
+
+.certificate-icon .icon {
+  width: 2rem;
+  height: 2rem;
+  color: white;
+}
+
+/* Endorsement Content */
+.endorsement-content {
+  padding: 2rem;
+}
+
+.endorsement-header-info {
+  margin-bottom: 1rem;
+}
+
+.endorsement-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #111827;
+  margin: 0 0 0.5rem 0;
+}
+
+.endorsement-authority {
+  color: #16a34a;
+  font-weight: 600;
+  margin: 0 0 0.25rem 0;
+  font-size: 1rem;
+}
+
+.endorsement-official {
+  color: #6b7280;
+  font-size: 0.875rem;
+  margin: 0;
+}
+
+.endorsement-description {
+  color: #4b5563;
+  line-height: 1.625;
+  margin: 0 0 1.5rem 0;
+  font-size: 1rem;
+}
+
+.endorsement-certified {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #16a34a;
+  font-weight: 500;
+}
+
+.certified-icon {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+/* ================================================
+   CREDENTIALS SECTION - Desktop
+   ================================================ */
+
+.credentials-section {
+  background: linear-gradient(to bottom right, #eff6ff, #f0fdf4);
+  border-radius: 1.5rem;
+  padding: 3rem;
+  border: 1px solid #dbeafe;
+}
+
+.credentials-content {
+  max-width: 64rem;
+  margin: 0 auto;
+}
+
+.credentials-header {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.credentials-icon {
+  width: 4rem;
+  height: 4rem;
+  color: #16a34a;
+  margin: 0 auto 1rem auto;
+}
+
+.credentials-title {
+  font-size: 1.875rem;
+  font-weight: 700;
+  color: #111827;
+  margin: 0 0 1rem 0;
+}
+
+.credentials-description {
+  color: #4b5563;
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.625;
+}
+
+.credentials-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}
+
+.credential-card {
+  background-color: white;
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  box-shadow:
+    0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  transition: all 0.2s ease;
+}
+
+.credential-card:hover {
+  box-shadow:
+    0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  transform: translateY(-2px);
+}
+
+.credential-icon-wrapper {
+  width: 2.5rem;
+  height: 2.5rem;
+  background-color: #dcfce7;
+  border-radius: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.credential-icon {
+  width: 1.5rem;
+  height: 1.5rem;
+  color: #16a34a;
+}
+
+.credential-text {
+  color: #374151;
+  font-weight: 500;
+  padding-top: 0.5rem;
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+/* ================================================
+   VERIFICATION CTA - Desktop
+   ================================================ */
+
+.verification-cta {
+  margin-top: 5rem;
+  text-align: center;
+}
+
+.verification-content {
+  background-color: #111827;
+  border-radius: 1.5rem;
+  padding: 3rem;
+}
+
+.verification-title {
+  font-size: 1.875rem;
+  font-weight: 700;
+  color: white;
+  margin: 0 0 1rem 0;
+}
+
+.verification-description {
+  color: #d1d5db;
+  font-size: 1.125rem;
+  margin: 0 auto 2rem auto;
+  max-width: 42rem;
+  line-height: 1.75;
+}
+
+.verification-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.verification-button {
+  padding: 1rem 2rem;
+  border-radius: 0.5rem;
+  transition: all 0.2s ease;
+  font-weight: 500;
+  cursor: pointer;
+  font-size: 1rem;
+  border: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.verification-button-primary {
+  background-color: #16a34a;
+  color: white;
+}
+
+.verification-button-primary:hover {
+  background-color: #15803d;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.verification-button-secondary {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.verification-button-secondary:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.button-icon {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.verification-button:active {
+  transform: translateY(0);
+}
+
+.verification-button:focus-visible {
+  outline: 2px solid white;
+  outline-offset: 2px;
+}
+
+/* ================================================
+   RESPONSIVE DESIGN - DESKTOP FIRST
+   ================================================ */
+
+/* Large Tablets and Small Laptops (max-width: 1024px) */
+@media (max-width: 1024px) {
+  .endorsements-container {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+
+  .endorsements-title {
+    font-size: 2.5rem;
+  }
+
+  .trust-title {
+    font-size: 2rem;
+  }
+
+  .endorsements-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
+
+/* Tablets (max-width: 768px) */
+@media (max-width: 768px) {
+  .endorsements-section {
+    padding: 4rem 0;
+  }
+
+  .endorsements-container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .endorsements-header {
+    margin-bottom: 3rem;
+  }
+
+  .endorsements-title {
+    font-size: 2rem;
+  }
+
+  .endorsements-description {
+    font-size: 1.125rem;
+  }
+
+  .trust-badge {
+    padding: 2rem;
+    margin-bottom: 3rem;
+  }
+
+  .trust-title {
+    font-size: 1.75rem;
+  }
+
+  .trust-description {
+    font-size: 1rem;
+  }
+
+  .endorsements-grid {
+    margin-bottom: 3rem;
+  }
+
+  .certificate-image-wrapper {
+    height: 14rem;
+  }
+
+  .endorsement-content {
+    padding: 1.5rem;
+  }
+
+  .endorsement-title {
+    font-size: 1.25rem;
+  }
+
+  .credentials-section {
+    padding: 2rem;
+  }
+
+  .credentials-title {
+    font-size: 1.5rem;
+  }
+
+  .credentials-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .verification-cta {
+    margin-top: 3rem;
+  }
+
+  .verification-content {
+    padding: 2rem;
+  }
+
+  .verification-title {
+    font-size: 1.5rem;
+  }
+
+  .verification-description {
+    font-size: 1rem;
+  }
+}
+
+/* Mobile Devices (max-width: 480px) */
+@media (max-width: 480px) {
+  .endorsements-section {
+    padding: 3rem 0;
+  }
+
+  .endorsements-header {
+    margin-bottom: 2rem;
+  }
+
+  .endorsements-title {
+    font-size: 1.75rem;
+  }
+
+  .endorsements-description {
+    font-size: 1rem;
+  }
+
+  .trust-badge {
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .trust-icon-circle {
+    width: 4rem;
+    height: 4rem;
+  }
+
+  .trust-icon {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+
+  .trust-title {
+    font-size: 1.5rem;
+  }
+
+  .trust-description {
+    font-size: 0.9375rem;
+  }
+
+  .endorsements-grid {
+    margin-bottom: 2rem;
+  }
+
+  .certificate-image-wrapper {
+    height: 12rem;
+  }
+
+  .certificate-icon {
+    width: 3rem;
+    height: 3rem;
+  }
+
+  .certificate-icon .icon {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+
+  .endorsement-content {
+    padding: 1.25rem;
+  }
+
+  .endorsement-title {
+    font-size: 1.125rem;
+  }
+
+  .endorsement-authority {
+    font-size: 0.9375rem;
+  }
+
+  .endorsement-description {
+    font-size: 0.9375rem;
+  }
+
+  .credentials-section {
+    padding: 1.5rem;
+  }
+
+  .credentials-icon {
+    width: 3rem;
+    height: 3rem;
+  }
+
+  .credentials-title {
+    font-size: 1.25rem;
+  }
+
+  .credentials-description {
+    font-size: 0.9375rem;
+  }
+
+  .credential-card {
+    padding: 1.25rem;
+  }
+
+  .credential-text {
+    font-size: 0.9375rem;
+  }
+
+  .verification-cta {
+    margin-top: 2rem;
+  }
+
+  .verification-content {
+    padding: 1.5rem;
+  }
+
+  .verification-title {
+    font-size: 1.25rem;
+  }
+
+  .verification-description {
+    font-size: 0.9375rem;
+  }
+
+  .verification-button {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+/* Extra Large Desktops (min-width: 1440px) */
+@media (min-width: 1440px) {
+  .endorsements-container {
+    max-width: 1536px;
+  }
+
+  .endorsements-title {
+    font-size: 3.5rem;
+  }
+
+  .trust-title {
+    font-size: 2.5rem;
+  }
+}
+
+/* ================================================
+   ACCESSIBILITY
+   ================================================ */
+
+/* Reduce motion */
+@media (prefers-reduced-motion: reduce) {
+  .endorsements-badge,
+  .endorsement-card,
+  .credential-card,
+  .verification-button,
+  .certificate-image {
+    transition: none;
+    animation: none;
+  }
+
+  .endorsements-badge:hover,
+  .endorsement-card:hover,
+  .credential-card:hover,
+  .verification-button:hover {
+    transform: none;
+  }
+
+  .endorsement-card:hover .certificate-image {
+    transform: none;
+  }
+}
+
+/* High contrast mode */
+@media (prefers-contrast: high) {
+  .endorsement-card,
+  .credential-card {
+    border-width: 2px;
+  }
+
+  .verification-button-secondary {
+    border-width: 2px;
+  }
+}
+
+/* ================================================
+   PRINT STYLES
+   ================================================ */
+
+@media print {
+  .endorsements-section {
+    padding: 2rem 0;
+    background: white;
+  }
+
+  .verification-buttons {
+    display: none;
+  }
+
+  .endorsements-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .trust-badge {
+    background: white;
+    color: black;
+    border: 2px solid #e5e7eb;
+  }
+
+  .trust-title {
+    color: black;
+  }
+
+  .trust-description {
+    color: #4b5563;
+  }
+
+  .verification-content {
+    background: white;
+    color: black;
+    border: 2px solid #e5e7eb;
+  }
+
+  .verification-title {
+    color: black;
+  }
+
+  .verification-description {
+    color: #4b5563;
+  }
+}
+
+/* ================================================
+   DARK MODE SUPPORT (Optional)
+   ================================================ */
+
+@media (prefers-color-scheme: dark) {
+  .endorsements-section {
+    background: linear-gradient(to bottom right, #1f2937, #111827);
+  }
+
+  .endorsements-title {
+    color: #f9fafb;
+  }
+
+  .endorsements-description {
+    color: #d1d5db;
+  }
+
+  .endorsement-card {
+    background-color: #1f2937;
+    border-color: #374151;
+  }
+
+  .endorsement-title {
+    color: #f9fafb;
+  }
+
+  .endorsement-description {
+    color: #d1d5db;
+  }
+
+  .endorsement-official {
+    color: #9ca3af;
+  }
+
+  .credentials-section {
+    background: linear-gradient(to bottom right, #1e3a8a, #064e3b);
+    border-color: #1d4ed8;
+  }
+
+  .credentials-title {
+    color: #f9fafb;
+  }
+
+  .credentials-description {
+    color: #d1d5db;
+  }
+
+  .credential-card {
+    background-color: #1f2937;
+    border-color: #374151;
+  }
+
+  .credential-text {
+    color: #d1d5db;
+  }
+}
+
+/* ================================================
+   ANIMATION ENHANCEMENTS
+   ================================================ */
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.endorsement-card {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+.endorsement-card:nth-child(1) {
+  animation-delay: 0.1s;
+}
+
+.endorsement-card:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .endorsement-card {
+    animation: none;
+  }
+}
+
+/* ================================================
+   LOADING STATES
+   ================================================ */
+
+.verification-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.verification-button:disabled:hover {
+  transform: none;
+  box-shadow: none;
+}

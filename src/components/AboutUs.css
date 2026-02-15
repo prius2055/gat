@@ -1,0 +1,731 @@
+/* ================================================
+   ABOUT US SECTION STYLES
+   ================================================ */
+
+/* Base Section */
+.about-section {
+  padding: 6rem 0;
+  background-color: white;
+}
+
+.about-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+@media (min-width: 640px) {
+  .about-container {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .about-container {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+/* ================================================
+   SECTION HEADER
+   ================================================ */
+
+.about-header {
+  text-align: center;
+  max-width: 48rem;
+  margin: 0 auto 4rem auto;
+}
+
+.about-badge {
+  color: #16a34a;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-size: 0.875rem;
+}
+
+.about-title {
+  margin-top: 1rem;
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: #111827;
+  line-height: 1.2;
+}
+
+@media (min-width: 768px) {
+  .about-title {
+    font-size: 3rem;
+  }
+}
+
+.about-description {
+  margin-top: 1.5rem;
+  font-size: 1.25rem;
+  color: #4b5563;
+  line-height: 1.75;
+}
+
+/* ================================================
+   STATS GRID
+   ================================================ */
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  margin-bottom: 5rem;
+}
+
+@media (min-width: 768px) {
+  .stats-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.stat-card {
+  background: linear-gradient(to bottom right, #f9fafb, white);
+  border-radius: 1rem;
+  padding: 2rem;
+  border: 1px solid #f3f4f6;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.stat-card:hover {
+  box-shadow:
+    0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  transform: translateY(-2px);
+}
+
+.stat-icon {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 0.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1rem auto;
+}
+
+.stat-icon.stat-blue {
+  background: linear-gradient(to bottom right, #3b82f6, #2563eb);
+}
+
+.stat-icon.stat-green {
+  background: linear-gradient(to bottom right, #22c55e, #16a34a);
+}
+
+.stat-icon.stat-purple {
+  background: linear-gradient(to bottom right, #a855f7, #9333ea);
+}
+
+.stat-icon .icon {
+  width: 2rem;
+  height: 2rem;
+  color: white;
+}
+
+.stat-value {
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: #111827;
+  margin-bottom: 0.5rem;
+}
+
+.stat-label {
+  color: #4b5563;
+  font-size: 1rem;
+}
+
+/* ================================================
+   MISSION STATEMENT
+   ================================================ */
+
+.mission-card {
+  background: linear-gradient(to bottom right, #f0fdf4, white);
+  border-radius: 1.5rem;
+  padding: 3rem;
+  margin-bottom: 5rem;
+  border: 1px solid #dcfce7;
+}
+
+.mission-content {
+  max-width: 64rem;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.mission-title {
+  font-size: 1.875rem;
+  font-weight: 700;
+  color: #111827;
+  margin-bottom: 1.5rem;
+}
+
+.mission-text {
+  font-size: 1.125rem;
+  color: #374151;
+  line-height: 1.75;
+  margin: 0 0 1.5rem 0;
+}
+
+.mission-text:last-child {
+  margin-bottom: 0;
+}
+
+/* ================================================
+   TEAM SECTION
+   ================================================ */
+
+.team-section {
+  margin-bottom: 3rem;
+}
+
+.team-section-title {
+  font-size: 1.875rem;
+  font-weight: 700;
+  color: #111827;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+@media (min-width: 768px) {
+  .team-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .team-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* ================================================
+   TEAM CARDS
+   ================================================ */
+
+.team-card {
+  background-color: white;
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow:
+    0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  border: 1px solid #f3f4f6;
+}
+
+.team-card:hover {
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  transform: translateY(-4px);
+}
+
+/* Team Photo */
+.team-photo-wrapper {
+  position: relative;
+  height: 35rem;
+  overflow: hidden;
+  background-color: #f3f4f6;
+}
+
+.team-photo {
+  width: 100%;
+  height: 100%;
+  transition: transform 0.3s ease;
+}
+
+.team-card:hover .team-photo {
+  transform: scale(1.05);
+}
+
+.team-photo-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.6),
+    transparent 50%,
+    transparent
+  );
+}
+
+/* Team Content */
+.team-content {
+  padding: 1.5rem;
+}
+
+.team-name {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #111827;
+  margin: 0 0 0.25rem 0;
+}
+
+.team-role {
+  color: #16a34a;
+  font-weight: 500;
+  margin: 0 0 1rem 0;
+  font-size: 0.9375rem;
+}
+
+.team-bio {
+  color: #4b5563;
+  font-size: 0.875rem;
+  line-height: 1.625;
+  margin: 0 0 1.5rem 0;
+}
+
+/* Social Links */
+.team-social {
+  display: flex;
+  gap: 0.75rem;
+  padding-top: 1rem;
+  border-top: 1px solid #f3f4f6;
+}
+
+.social-link {
+  width: 2.5rem;
+  height: 2.5rem;
+  background-color: #f3f4f6;
+  border-radius: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+  text-decoration: none;
+}
+
+.social-link:hover {
+  background-color: #16a34a;
+  transform: translateY(-2px);
+}
+
+.social-icon {
+  width: 1.25rem;
+  height: 1.25rem;
+  color: #4b5563;
+  transition: color 0.2s ease;
+}
+
+.social-link:hover .social-icon {
+  color: white;
+}
+
+/* ================================================
+   CTA SECTION
+   ================================================ */
+
+.cta-section {
+  margin-top: 5rem;
+  background: linear-gradient(to right, #16a34a, #15803d);
+  border-radius: 1.5rem;
+  padding: 3rem;
+  text-align: center;
+}
+
+.cta-title {
+  font-size: 1.875rem;
+  font-weight: 700;
+  color: white;
+  margin: 0 0 1rem 0;
+}
+
+.cta-description {
+  color: #dcfce7;
+  font-size: 1.125rem;
+  margin: 0 auto 2rem auto;
+  max-width: 42rem;
+  line-height: 1.75;
+}
+
+.cta-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.cta-button {
+  padding: 1rem 2rem;
+  border-radius: 0.5rem;
+  transition: all 0.2s ease;
+  font-weight: 500;
+  cursor: pointer;
+  font-size: 1rem;
+  border: none;
+}
+
+.cta-button-primary {
+  background-color: white;
+  color: #16a34a;
+}
+
+.cta-button-primary:hover {
+  background-color: #f0fdf4;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.cta-button-secondary {
+  background-color: #15803d;
+  color: white;
+  border: 1px solid #22c55e;
+}
+
+.cta-button-secondary:hover {
+  background-color: #166534;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.cta-button:active {
+  transform: translateY(0);
+}
+
+.cta-button:focus-visible {
+  outline: 2px solid white;
+  outline-offset: 2px;
+}
+
+/* ================================================
+   RESPONSIVE DESIGN
+   ================================================ */
+
+/* Small mobile devices (max-width: 480px) */
+@media (max-width: 480px) {
+  .about-section {
+    padding: 4rem 0;
+  }
+
+  .about-header {
+    margin-bottom: 3rem;
+  }
+
+  .about-title {
+    font-size: 1.875rem;
+  }
+
+  .about-description {
+    font-size: 1rem;
+  }
+
+  .stats-grid {
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+  }
+
+  .stat-card {
+    padding: 1.5rem;
+  }
+
+  .stat-value {
+    font-size: 2rem;
+  }
+
+  .mission-card {
+    padding: 2rem 1.5rem;
+    margin-bottom: 3rem;
+  }
+
+  .mission-title {
+    font-size: 1.5rem;
+  }
+
+  .mission-text {
+    font-size: 1rem;
+  }
+
+  .team-section-title {
+    font-size: 1.5rem;
+  }
+
+  .team-grid {
+    gap: 1.5rem;
+  }
+
+  .team-photo-wrapper {
+    height: 16rem;
+  }
+
+  .cta-section {
+    padding: 2rem 1.5rem;
+    margin-top: 3rem;
+  }
+
+  .cta-title {
+    font-size: 1.5rem;
+  }
+
+  .cta-description {
+    font-size: 1rem;
+  }
+
+  .cta-button {
+    width: 100%;
+  }
+}
+
+/* Tablets (768px - 1024px) */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .team-grid {
+    gap: 1.5rem;
+  }
+}
+
+/* Large desktops (1440px+) */
+@media (min-width: 1440px) {
+  .about-container {
+    max-width: 1536px;
+  }
+
+  .about-title {
+    font-size: 3.5rem;
+  }
+
+  .team-photo-wrapper {
+    height: 20rem;
+  }
+}
+
+/* ================================================
+   ACCESSIBILITY
+   ================================================ */
+
+/* Focus states */
+.social-link:focus-visible {
+  outline: 2px solid #16a34a;
+  outline-offset: 2px;
+}
+
+/* Reduce motion */
+@media (prefers-reduced-motion: reduce) {
+  .stat-card,
+  .team-card,
+  .social-link,
+  .cta-button,
+  .team-photo {
+    transition: none;
+    animation: none;
+  }
+
+  .stat-card:hover,
+  .team-card:hover,
+  .social-link:hover,
+  .cta-button:hover {
+    transform: none;
+  }
+
+  .team-card:hover .team-photo {
+    transform: none;
+  }
+}
+
+/* High contrast mode */
+@media (prefers-contrast: high) {
+  .stat-card,
+  .team-card,
+  .mission-card {
+    border-width: 2px;
+  }
+
+  .cta-button-secondary {
+    border-width: 2px;
+  }
+}
+
+/* ================================================
+   PRINT STYLES
+   ================================================ */
+
+@media print {
+  .about-section {
+    padding: 2rem 0;
+  }
+
+  .cta-section {
+    background: white;
+    color: black;
+    border: 2px solid #e5e7eb;
+  }
+
+  .cta-title {
+    color: black;
+  }
+
+  .cta-description {
+    color: #4b5563;
+  }
+
+  .cta-buttons {
+    display: none;
+  }
+
+  .team-card {
+    page-break-inside: avoid;
+  }
+
+  .social-link {
+    display: none;
+  }
+}
+
+/* ================================================
+   DARK MODE SUPPORT (Optional)
+   ================================================ */
+
+@media (prefers-color-scheme: dark) {
+  .about-section {
+    background-color: #111827;
+  }
+
+  .about-title,
+  .mission-title,
+  .team-section-title,
+  .team-name,
+  .stat-value {
+    color: #f9fafb;
+  }
+
+  .about-description,
+  .stat-label {
+    color: #d1d5db;
+  }
+
+  .stat-card {
+    background: linear-gradient(to bottom right, #1f2937, #111827);
+    border-color: #374151;
+  }
+
+  .mission-card {
+    background: linear-gradient(to bottom right, #064e3b, #1f2937);
+    border-color: #166534;
+  }
+
+  .mission-text {
+    color: #d1d5db;
+  }
+
+  .team-card {
+    background-color: #1f2937;
+    border-color: #374151;
+  }
+
+  .team-bio {
+    color: #d1d5db;
+  }
+
+  .team-social {
+    border-top-color: #374151;
+  }
+
+  .social-link {
+    background-color: #374151;
+  }
+
+  .social-icon {
+    color: #d1d5db;
+  }
+}
+
+/* ================================================
+   ANIMATION ENHANCEMENTS
+   ================================================ */
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.stat-card {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+.stat-card:nth-child(1) {
+  animation-delay: 0.1s;
+}
+
+.stat-card:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.stat-card:nth-child(3) {
+  animation-delay: 0.3s;
+}
+
+.team-card {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+.team-card:nth-child(1) {
+  animation-delay: 0.1s;
+}
+
+.team-card:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.team-card:nth-child(3) {
+  animation-delay: 0.3s;
+}
+
+.team-card:nth-child(4) {
+  animation-delay: 0.4s;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .stat-card,
+  .team-card {
+    animation: none;
+  }
+}
+
+/* ================================================
+   LOADING STATES
+   ================================================ */
+
+.cta-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.cta-button:disabled:hover {
+  transform: none;
+  box-shadow: none;
+}
+
+/* ================================================
+   UTILITY CLASSES
+   ================================================ */
+
+.team-photo-loading {
+  background: linear-gradient(90deg, #f3f4f6 25%, #e5e7eb 50%, #f3f4f6 75%);
+  background-size: 200% 100%;
+  animation: loading 1.5s infinite;
+}
+
+@keyframes loading {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}

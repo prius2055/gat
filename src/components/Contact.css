@@ -1,0 +1,713 @@
+/* ================================================
+   CONTACT SECTION STYLES
+   Desktop-First Approach
+   ================================================ */
+
+/* Base Section - Desktop */
+.contact-section {
+  padding: 6rem 0;
+  background-color: white;
+  text-align: left;
+}
+
+.contact-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+/* ================================================
+   MAIN GRID LAYOUT - Desktop
+   ================================================ */
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+}
+
+/* ================================================
+   LEFT SIDE - CONTACT INFO
+   ================================================ */
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-badge {
+  color: #16a34a;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-size: 0.875rem;
+  display: inline-block;
+}
+
+.contact-title {
+  margin-top: 1rem;
+  font-size: 3rem;
+  font-weight: 700;
+  color: #111827;
+  line-height: 1.2;
+}
+
+.contact-description {
+  margin-top: 1.5rem;
+  font-size: 1.125rem;
+  color: #4b5563;
+  line-height: 1.75;
+}
+
+/* ================================================
+   CONTACT DETAILS
+   ================================================ */
+
+.contact-details {
+  margin-top: 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.contact-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.contact-icon-wrapper {
+  width: 3rem;
+  height: 3rem;
+  background-color: #dcfce7;
+  border-radius: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: all 0.3s ease;
+}
+
+.contact-item:hover .contact-icon-wrapper {
+  background-color: #bbf7d0;
+  transform: scale(1.05);
+}
+
+.contact-icon {
+  width: 1.5rem;
+  height: 1.5rem;
+  color: #16a34a;
+}
+
+.contact-item-title {
+  font-weight: 700;
+  color: #111827;
+  margin: 0 0 0.25rem 0;
+  font-size: 1rem;
+}
+
+.contact-item-text {
+  color: #4b5563;
+  margin: 0;
+  line-height: 1.625;
+  font-size: 1rem;
+}
+
+/* ================================================
+   SOCIAL MEDIA SECTION
+   ================================================ */
+
+.social-media-section {
+  margin-top: 3rem;
+}
+
+.social-title {
+  font-weight: 700;
+  color: #111827;
+  margin: 0 0 1rem 0;
+  font-size: 1rem;
+}
+
+.social-links {
+  display: flex;
+  gap: 1rem;
+}
+
+.social-link {
+  width: 3rem;
+  height: 3rem;
+  background-color: #16a34a;
+  border-radius: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+  text-decoration: none;
+}
+
+.social-link:hover {
+  background-color: #15803d;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.social-link:active {
+  transform: translateY(0);
+}
+
+.social-link:focus-visible {
+  outline: 2px solid #16a34a;
+  outline-offset: 2px;
+}
+
+.social-icon {
+  width: 1.5rem;
+  height: 1.5rem;
+  color: white;
+}
+
+/* ================================================
+   RIGHT SIDE - VISUAL CONTENT
+   ================================================ */
+
+.contact-visual {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+/* ================================================
+   LOCATION CARD
+   ================================================ */
+
+.location-card {
+  background: linear-gradient(to bottom right, #f0fdf4, #eff6ff);
+  border-radius: 1.5rem;
+  padding: 2rem;
+  border: 1px solid #dcfce7;
+}
+
+.location-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.location-icon-wrapper {
+  width: 3.5rem;
+  height: 3.5rem;
+  background-color: #16a34a;
+  border-radius: 0.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.location-icon {
+  width: 1.75rem;
+  height: 1.75rem;
+  color: white;
+}
+
+.location-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #111827;
+  margin: 0 0 0.5rem 0;
+}
+
+.location-description {
+  color: #4b5563;
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.625;
+}
+
+/* ================================================
+   MAP SECTION
+   ================================================ */
+
+.map-wrapper {
+  background-color: white;
+  border-radius: 1rem;
+  overflow: hidden;
+  border: 1px solid #e5e7eb;
+  box-shadow:
+    0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+.map-container {
+  position: relative;
+  height: 20rem;
+  background-color: #f3f4f6;
+}
+
+.map-container iframe {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+/* ================================================
+   DIRECTION BUTTON
+   ================================================ */
+
+.direction-button-wrapper {
+  margin-top: 1.5rem;
+}
+
+.direction-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: #16a34a;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  transition: all 0.2s ease;
+  font-weight: 500;
+  font-size: 1rem;
+  text-decoration: none;
+}
+
+.direction-button:hover {
+  background-color: #15803d;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.direction-button:active {
+  transform: translateY(0);
+}
+
+.direction-button:focus-visible {
+  outline: 2px solid #16a34a;
+  outline-offset: 2px;
+}
+
+.button-icon {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+/* ================================================
+   RESPONSIVE DESIGN - DESKTOP FIRST
+   ================================================ */
+
+/* Large Tablets and Small Laptops (max-width: 1024px) */
+@media (max-width: 1024px) {
+  .contact-container {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+
+  .contact-grid {
+    gap: 3rem;
+  }
+
+  .contact-title {
+    font-size: 2.5rem;
+  }
+}
+
+/* Tablets (max-width: 768px) */
+@media (max-width: 768px) {
+  .contact-section {
+    padding: 4rem 0;
+  }
+
+  .contact-container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .contact-title {
+    font-size: 2rem;
+  }
+
+  .contact-description {
+    font-size: 1rem;
+  }
+
+  .contact-details {
+    margin-top: 2rem;
+    gap: 1.25rem;
+  }
+
+  .social-media-section {
+    margin-top: 2rem;
+  }
+
+  .location-card {
+    padding: 1.5rem;
+  }
+
+  .location-title {
+    font-size: 1.25rem;
+  }
+
+  .map-container {
+    height: 18rem;
+  }
+}
+
+/* Mobile Devices (max-width: 480px) */
+@media (max-width: 480px) {
+  .contact-section {
+    padding: 3rem 0;
+  }
+
+  .contact-grid {
+    gap: 2rem;
+  }
+
+  .contact-title {
+    font-size: 1.75rem;
+  }
+
+  .contact-description {
+    font-size: 0.9375rem;
+  }
+
+  .contact-details {
+    margin-top: 1.5rem;
+    gap: 1rem;
+  }
+
+  .contact-item {
+    gap: 0.75rem;
+  }
+
+  .contact-icon-wrapper {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+
+  .contact-icon {
+    width: 1.25rem;
+    height: 1.25rem;
+  }
+
+  .contact-item-title {
+    font-size: 0.9375rem;
+  }
+
+  .contact-item-text {
+    font-size: 0.875rem;
+  }
+
+  .social-media-section {
+    margin-top: 1.5rem;
+  }
+
+  .social-title {
+    font-size: 0.9375rem;
+  }
+
+  .social-links {
+    gap: 0.75rem;
+  }
+
+  .social-link {
+    width: 2.75rem;
+    height: 2.75rem;
+  }
+
+  .social-icon {
+    width: 1.25rem;
+    height: 1.25rem;
+  }
+
+  .location-card {
+    padding: 1.25rem;
+  }
+
+  .location-header {
+    margin-bottom: 1.25rem;
+  }
+
+  .location-icon-wrapper {
+    width: 3rem;
+    height: 3rem;
+  }
+
+  .location-icon {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+
+  .location-title {
+    font-size: 1.125rem;
+  }
+
+  .location-description {
+    font-size: 0.875rem;
+  }
+
+  .map-container {
+    height: 16rem;
+  }
+
+  .direction-button-wrapper {
+    margin-top: 1.25rem;
+  }
+
+  .direction-button {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+/* Extra Large Desktops (min-width: 1440px) */
+@media (min-width: 1440px) {
+  .contact-container {
+    max-width: 1536px;
+  }
+
+  .contact-title {
+    font-size: 3.5rem;
+  }
+
+  .contact-description {
+    font-size: 1.25rem;
+  }
+
+  .map-container {
+    height: 24rem;
+  }
+}
+
+/* ================================================
+   ACCESSIBILITY
+   ================================================ */
+
+/* Reduce motion */
+@media (prefers-reduced-motion: reduce) {
+  .contact-icon-wrapper,
+  .social-link,
+  .direction-button {
+    transition: none;
+    animation: none;
+  }
+
+  .contact-item:hover .contact-icon-wrapper,
+  .social-link:hover,
+  .direction-button:hover {
+    transform: none;
+  }
+}
+
+/* High contrast mode */
+@media (prefers-contrast: high) {
+  .location-card {
+    border-width: 2px;
+  }
+
+  .social-link,
+  .direction-button {
+    border: 2px solid transparent;
+  }
+}
+
+/* ================================================
+   PRINT STYLES
+   ================================================ */
+
+@media print {
+  .contact-section {
+    padding: 2rem 0;
+  }
+
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .social-links,
+  .map-wrapper {
+    display: none;
+  }
+
+  .location-card {
+    background: white;
+    border: 2px solid #e5e7eb;
+  }
+
+  .direction-button {
+    display: none;
+  }
+}
+
+/* ================================================
+   DARK MODE SUPPORT (Optional)
+   ================================================ */
+
+@media (prefers-color-scheme: dark) {
+  .contact-section {
+    background-color: #111827;
+  }
+
+  .contact-title {
+    color: #f9fafb;
+  }
+
+  .contact-description,
+  .contact-item-text,
+  .location-description {
+    color: #d1d5db;
+  }
+
+  .contact-item-title,
+  .social-title,
+  .location-title {
+    color: #f9fafb;
+  }
+
+  .contact-icon-wrapper {
+    background-color: #166534;
+  }
+
+  .contact-item:hover .contact-icon-wrapper {
+    background-color: #15803d;
+  }
+
+  .contact-icon {
+    color: #dcfce7;
+  }
+
+  .location-card {
+    background: linear-gradient(to bottom right, #064e3b, #1e3a8a);
+    border-color: #166534;
+  }
+
+  .map-wrapper {
+    border-color: #374151;
+  }
+}
+
+/* ================================================
+   ANIMATION ENHANCEMENTS
+   ================================================ */
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.contact-info {
+  animation: fadeInLeft 0.8s ease-out;
+}
+
+.contact-visual {
+  animation: fadeInRight 0.8s ease-out;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .contact-info,
+  .contact-visual {
+    animation: none;
+  }
+}
+
+/* ================================================
+   LOADING STATES
+   ================================================ */
+
+.direction-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.direction-button:disabled:hover {
+  background-color: #16a34a;
+  transform: none;
+  box-shadow: none;
+}
+
+/* ================================================
+   UTILITY CLASSES
+   ================================================ */
+
+/* Map loading state */
+.map-loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(90deg, #f3f4f6 25%, #e5e7eb 50%, #f3f4f6 75%);
+  background-size: 200% 100%;
+  animation: loading 1.5s infinite;
+}
+
+@keyframes loading {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+/* Contact item highlight */
+.contact-item-highlight {
+  background-color: #f0fdf4;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  margin: -0.5rem;
+}
+
+/* Social link with custom color */
+.social-link-facebook {
+  background-color: #1877f2;
+}
+
+.social-link-twitter {
+  background-color: #1da1f2;
+}
+
+.social-link-instagram {
+  background: linear-gradient(
+    45deg,
+    #f09433 0%,
+    #e6683c 25%,
+    #dc2743 50%,
+    #cc2366 75%,
+    #bc1888 100%
+  );
+}
+
+.social-link-linkedin {
+  background-color: #0077b5;
+}
+
+.social-link-facebook:hover,
+.social-link-twitter:hover,
+.social-link-instagram:hover,
+.social-link-linkedin:hover {
+  opacity: 0.9;
+}
