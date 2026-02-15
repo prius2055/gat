@@ -1,14 +1,15 @@
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
+import { Link } from "react-router-dom";
+import { useAuth } from "../Context/AuthContext";
+
 import Logo from "../img/logo.png";
 import "./Navigation.css";
 
-export default function Navigation({
-  onLoginClick,
-  onDashboardClick,
-  isAuthenticated,
-}) {
+export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
+
+  const { isAuthenticated } = useAuth();
 
   const scrollToSection = (id) => {
     const element = document.getElementById(id);
@@ -78,13 +79,13 @@ export default function Navigation({
               Contact
             </button>
             {isAuthenticated ? (
-              <button onClick={onDashboardClick} className="nav-button">
+              <Link to="/dashboard" className="nav-button">
                 Dashboard
-              </button>
+              </Link>
             ) : (
-              <button onClick={onLoginClick} className="nav-button">
+              <Link to="/login" className="nav-button">
                 Login
-              </button>
+              </Link>
             )}
           </div>
 
@@ -149,19 +150,13 @@ export default function Navigation({
                 Contact
               </button>
               {isAuthenticated ? (
-                <button
-                  onClick={onDashboardClick}
-                  className="nav-button nav-button-mobile"
-                >
+                <Link to="/dashboard" className="nav-button nav-button-mobile">
                   Dashboard
-                </button>
+                </Link>
               ) : (
-                <button
-                  onClick={onLoginClick}
-                  className="nav-button nav-button-mobile"
-                >
+                <Link to="/login" className="nav-button nav-button-mobile">
                   Login
-                </button>
+                </Link>
               )}
             </div>
           </div>
