@@ -1,5 +1,6 @@
-import { useRef, useState } from "react";
+import { useRef, useState, useEffect } from "react";
 import { useAuth } from "../Context/AuthContext";
+import { useNavigate } from "react-router-dom";
 import {
   User,
   Mail,
@@ -14,21 +15,28 @@ import {
   CheckCircle,
   X,
 } from "lucide-react";
+
 import Logo from "../img/logo.png";
 
 import "./Dashboard.css";
 
 export default function Dashboard({ onLogout }) {
-  const { user, logout, upgradeMembership } = useAuth();
+  const { user, logout, loading, upgradeMembership } = useAuth();
   const membershipCardRef = useRef(null);
+  const navigate = useNavigate();
+
   const [upgradeDialogOpen, setUpgradeDialogOpen] = useState(false);
   const [selectedTier, setSelectedTier] = useState(null);
   const [isUpgrading, setIsUpgrading] = useState(false);
   const [upgradeSuccess, setUpgradeSuccess] = useState(false);
 
-  if (!user) {
-    return null;
-  }
+  useEffect(() => {
+    if (!loading && !user) {
+      navigate("/login", { replace: true });
+    }
+  }, [user, loading, navigate]);
+
+  if (loading) return <div>Loading...</div>;
 
   console.log("User data in Dashboard:", user);
 

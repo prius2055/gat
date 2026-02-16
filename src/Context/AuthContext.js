@@ -26,7 +26,7 @@ export const AuthProvider = ({ children }) => {
     }
 
     try {
-      // console.log("🔵 Checking authentication...");
+      console.log("🔵 Checking authentication...");
 
       const response = await fetch(`${BASE_URL}/verify`, {
         headers: {
@@ -39,12 +39,12 @@ export const AuthProvider = ({ children }) => {
         const data = await response.json();
         setUser(data.user);
       } else {
-        // console.log("⚠️ Token invalid, clearing...");
+        console.log("⚠️ Token invalid, clearing...");
         localStorage.removeItem("token");
         setUser(null);
       }
     } catch (error) {
-      // console.error("❌ Auth check failed:", error);
+      console.error("❌ Auth check failed:", error);
       localStorage.removeItem("token");
       setUser(null);
     } finally {
@@ -199,9 +199,7 @@ export const AuthProvider = ({ children }) => {
     }
   };
 
-  const isAuthenticated = () => {
-    return !!user && !!localStorage.getItem("token");
-  };
+  const isAuthenticated = !!user;
 
   return (
     <AuthContext.Provider
