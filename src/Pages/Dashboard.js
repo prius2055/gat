@@ -38,6 +38,11 @@ export default function Dashboard({ onLogout }) {
 
   if (loading) return <div>Loading...</div>;
 
+  if (!user) {
+    navigate("/login", { replace: true });
+    return null;
+  }
+
   console.log("User data in Dashboard:", user);
 
   const handleLogout = () => {
