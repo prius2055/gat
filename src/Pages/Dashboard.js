@@ -82,7 +82,7 @@ export default function Dashboard({ onLogout }) {
     // window.print();
   };
 
-  const membershipDate = new Date(user.createdAt);
+  const membershipDate = new Date(user?.createdAt);
   const formattedDate = membershipDate.toLocaleDateString("en-US", {
     year: "numeric",
     month: "long",
