@@ -1,8 +1,8 @@
 import {
-  Facebook,
-  Twitter,
-  Instagram,
-  Linkedin,
+  // Facebook,
+  // Twitter,
+  // Instagram,
+  // Linkedin,
   Mail,
   Phone,
   MapPin,
@@ -34,7 +34,7 @@ export default function Footer() {
               prosperous, inclusive, and progressive Nigeria. Together, we
               champion transformation and sustainable development.
             </p>
-            <div className="footer-social">
+            {/* <div className="footer-social">
               <a href="#" className="social-link" aria-label="Facebook">
                 <Facebook className="social-icon" />
               </a>
@@ -47,7 +47,7 @@ export default function Footer() {
               <a href="#" className="social-link" aria-label="LinkedIn">
                 <Linkedin className="social-icon" />
               </a>
-            </div>
+            </div> */}
           </div>
 
           {/* Quick Links */}
@@ -128,7 +128,7 @@ export default function Footer() {
               © {currentYear} Global Alliance for Tinubu Campaign. All rights
               reserved.
             </p>
-            <div className="footer-legal">
+            {/* <div className="footer-legal">
               <a href="#" className="legal-link">
                 Privacy Policy
               </a>
@@ -138,7 +138,7 @@ export default function Footer() {
               <a href="#" className="legal-link">
                 Disclaimer
               </a>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>

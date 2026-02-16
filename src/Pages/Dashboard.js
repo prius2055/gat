@@ -8,12 +8,8 @@ import {
   Award,
   Calendar,
   LogOut,
-  FileText,
-  Briefcase,
-  UserCheck,
   Shield,
   Printer,
-  Users,
   TrendingUp,
   CheckCircle,
   X,
@@ -126,68 +122,68 @@ export default function Dashboard({ onLogout }) {
 
   const colors = getMembershipColor(user.role);
 
-  const benefits = [
-    {
-      icon: UserCheck,
-      title: "Policy Engagement & Dialogue",
-      description:
-        "Participate in structured forums, town halls, and strategy sessions where members can share ideas, policy feedback, and recommendations that support national development.",
-      color: "blue",
-      badgeColor: "badge-outline-blue",
-      iconBg: "icon-bg-blue",
-      iconColor: "icon-blue",
-    },
-    {
-      icon: Award,
-      title: "Leadership & Volunteer Opportunities",
-      description:
-        "Serve in committees, regional teams, and project groups that contribute directly to campaign initiatives and community impact programs",
-      color: "green",
-      badgeColor: "badge-outline-green",
-      iconBg: "icon-bg-green",
-      iconColor: "icon-green",
-    },
-    {
-      icon: Briefcase,
-      title: "Professional Networking",
-      description:
-        "Connect with like-minded professionals, entrepreneurs, and diaspora leaders to collaborate on projects that promote economic growth and innovation across Nigeria.",
-      color: "purple",
-      badgeColor: "badge-outline-purple",
-      iconBg: "icon-bg-purple",
-      iconColor: "icon-purple",
-    },
-    {
-      icon: UserCheck,
-      title: "Capacity Building & Training",
-      description:
-        "Access webinars, workshops, and mentorship programs focused on leadership, governance, entrepreneurship, and civic engagement.",
-      color: "blue",
-      badgeColor: "badge-outline-blue",
-      iconBg: "icon-bg-blue",
-      iconColor: "icon-blue",
-    },
-    {
-      icon: Award,
-      title: "Events & Special Invitations",
-      description:
-        "Receive priority invitations to conferences, town halls, fundraising dinners, and official campaign events.",
-      color: "green",
-      badgeColor: "badge-outline-green",
-      iconBg: "icon-bg-green",
-      iconColor: "icon-green",
-    },
-    {
-      icon: Briefcase,
-      title: "Recognition & Visibility",
-      description:
-        "Active members may be recognized for their contributions and impact within the movement and community initiatives.",
-      color: "purple",
-      badgeColor: "badge-outline-purple",
-      iconBg: "icon-bg-purple",
-      iconColor: "icon-purple",
-    },
-  ];
+  // const benefits = [
+  //   {
+  //     icon: UserCheck,
+  //     title: "Policy Engagement & Dialogue",
+  //     description:
+  //       "Participate in structured forums, town halls, and strategy sessions where members can share ideas, policy feedback, and recommendations that support national development.",
+  //     color: "blue",
+  //     badgeColor: "badge-outline-blue",
+  //     iconBg: "icon-bg-blue",
+  //     iconColor: "icon-blue",
+  //   },
+  //   {
+  //     icon: Award,
+  //     title: "Leadership & Volunteer Opportunities",
+  //     description:
+  //       "Serve in committees, regional teams, and project groups that contribute directly to campaign initiatives and community impact programs",
+  //     color: "green",
+  //     badgeColor: "badge-outline-green",
+  //     iconBg: "icon-bg-green",
+  //     iconColor: "icon-green",
+  //   },
+  //   {
+  //     icon: Briefcase,
+  //     title: "Professional Networking",
+  //     description:
+  //       "Connect with like-minded professionals, entrepreneurs, and diaspora leaders to collaborate on projects that promote economic growth and innovation across Nigeria.",
+  //     color: "purple",
+  //     badgeColor: "badge-outline-purple",
+  //     iconBg: "icon-bg-purple",
+  //     iconColor: "icon-purple",
+  //   },
+  //   {
+  //     icon: UserCheck,
+  //     title: "Capacity Building & Training",
+  //     description:
+  //       "Access webinars, workshops, and mentorship programs focused on leadership, governance, entrepreneurship, and civic engagement.",
+  //     color: "blue",
+  //     badgeColor: "badge-outline-blue",
+  //     iconBg: "icon-bg-blue",
+  //     iconColor: "icon-blue",
+  //   },
+  //   {
+  //     icon: Award,
+  //     title: "Events & Special Invitations",
+  //     description:
+  //       "Receive priority invitations to conferences, town halls, fundraising dinners, and official campaign events.",
+  //     color: "green",
+  //     badgeColor: "badge-outline-green",
+  //     iconBg: "icon-bg-green",
+  //     iconColor: "icon-green",
+  //   },
+  //   {
+  //     icon: Briefcase,
+  //     title: "Recognition & Visibility",
+  //     description:
+  //       "Active members may be recognized for their contributions and impact within the movement and community initiatives.",
+  //     color: "purple",
+  //     badgeColor: "badge-outline-purple",
+  //     iconBg: "icon-bg-purple",
+  //     iconColor: "icon-purple",
+  //   },
+  // ];
 
   const handleUpgrade = async () => {
     if (selectedTier) {

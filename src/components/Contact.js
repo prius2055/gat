@@ -2,10 +2,10 @@ import {
   Mail,
   Phone,
   MapPin,
-  Facebook,
-  Twitter,
-  Instagram,
-  Linkedin,
+  // Facebook,
+  // Twitter,
+  // Instagram,
+  // Linkedin,
   Clock,
   Globe,
 } from "lucide-react";
@@ -88,7 +88,7 @@ export default function Contact() {
             </div>
 
             {/* Social Media */}
-            <div className="social-media-section">
+            {/* <div className="social-media-section">
               <h3 className="social-title">Follow Our Campaign</h3>
               <div className="social-links">
                 <a href="#" className="social-link" aria-label="Facebook">
@@ -104,7 +104,7 @@ export default function Contact() {
                   <Linkedin className="social-icon" />
                 </a>
               </div>
-            </div>
+            </div> */}
           </div>
 
           {/* Right Side - Visual Content */}
