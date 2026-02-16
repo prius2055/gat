@@ -79,6 +79,7 @@ export default function Dashboard({ onLogout }) {
         printWindow.print();
       }
     }
+    // window.print();
   };
 
   const membershipDate = new Date(user.createdAt);
@@ -348,6 +349,49 @@ export default function Dashboard({ onLogout }) {
                           <Shield className="card-verified-icon" />
                           <span>Verified Member</span>
                         </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* BACK OF CARD */}
+                  <div className="membership-card-back">
+                    <div className="back-inner">
+                      {/* Header */}
+                      <div className="back-header">
+                        <img
+                          src={Logo}
+                          alt="Global Alliance Logo"
+                          className="back-logo"
+                        />
+                        <h3 className="back-title">
+                          MEMBERSHIP IDENTIFICATION
+                        </h3>
+                      </div>
+
+                      {/* Instructions */}
+                      <div className="back-message">
+                        <p>If found, please return this card to:</p>
+
+                        <p className="back-address">
+                          Global Alliance for Tinubu Campaign Head Office
+                          <br />
+                          3 Kumasi Crescent, Wuse 2<br />
+                          Abuja, Nigeria
+                        </p>
+                      </div>
+
+                      {/* Signature Section */}
+                      <div className="signature-section">
+                        <div className="signature-line"></div>
+                        <span className="signature-label">
+                          Authorized Signature
+                        </span>
+                      </div>
+
+                      {/* Footer */}
+                      <div className="back-footer">
+                        This card remains the property of the organization and
+                        must be presented upon request.
                       </div>
                     </div>
                   </div>
