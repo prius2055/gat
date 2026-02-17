@@ -30,7 +30,7 @@ export default function Dashboard({ onLogout }) {
   const [upgradeDialogOpen, setUpgradeDialogOpen] = useState(false);
   const [selectedTier, setSelectedTier] = useState(null);
   const [isUpgrading, setIsUpgrading] = useState(false);
-  const [upgradeSuccess, setUpgradeSuccess] = useState(false);
+  // const [upgradeSuccess, setUpgradeSuccess] = useState(false);
 
   useEffect(() => {
     if (!loading && !user) {
@@ -208,22 +208,22 @@ export default function Dashboard({ onLogout }) {
   const handleUpgradePayment = async () => {
     if (selectedTier) {
       console.log("Initiating upgrade to:", selectedTier);
-      // setIsUpgrading(true);
-      // try {
-      //   const success = await upgradeMembership(selectedTier);
-      //   if (success) {
-      //     setUpgradeSuccess(true);
-      //     setUpgradeDialogOpen(false);
-      //     setTimeout(() => {
-      //       setUpgradeSuccess(false);
-      //       setSelectedTier(null);
-      //     }, 3000);
-      //   }
-      // } catch (error) {
-      //   console.error("Upgrade failed:", error);
-      // } finally {
-      //   setIsUpgrading(false);
-      // }
+      setIsUpgrading(true);
+      try {
+        const success = await upgradeMembership(selectedTier);
+        if (success) {
+          // setUpgradeSuccess(true);
+          setUpgradeDialogOpen(false);
+          setTimeout(() => {
+            // setUpgradeSuccess(false);
+            setSelectedTier(null);
+          }, 3000);
+        }
+      } catch (error) {
+        console.error("Upgrade failed:", error);
+      } finally {
+        setIsUpgrading(false);
+      }
     }
   };
 
