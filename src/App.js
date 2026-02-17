@@ -5,6 +5,7 @@ import Homepage from "./Pages/Homepage";
 import Dashboard from "./Pages/Dashboard";
 import Login from "./Pages/Login";
 import Register from "./Pages/Register";
+import ProtectedRoutes from "./components/ProtectedRoutes";
 
 import "./App.css";
 
@@ -15,9 +16,11 @@ function App() {
         <div className="App">
           <Routes>
             <Route path="/" element={<Homepage />} />
-            <Route path="/dashboard" element={<Dashboard />} />
             <Route path="/login" element={<Login />} />
             <Route path="/register" element={<Register />} />
+            <Route element={<ProtectedRoutes />}>
+              <Route path="/dashboard" element={<Dashboard />} />
+            </Route>
           </Routes>
         </div>
       </AuthProvider>

@@ -79,7 +79,6 @@ export default function Login({ onLoginSuccess }) {
     console.log("Login response:", loginSuccess);
 
     if (loginSuccess.status) {
-      setIsLoading(false);
       setTimeout(() => {
         navigate("/dashboard");
       }, 2000);

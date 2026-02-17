@@ -7,6 +7,7 @@ import {
   Wifi,
 } from "lucide-react";
 import "./Initiatives.css";
+import { Link } from "react-router-dom";
 
 export default function Initiatives() {
   const initiatives = [
@@ -95,7 +96,9 @@ export default function Initiatives() {
               Join us in supporting these transformative initiatives that will
               shape Nigeria's future for generations to come.
             </p>
-            <button className="cta-button">Get Involved Today</button>
+            <Link to="/register" className="cta-button">
+              Get Involved Today
+            </Link>
           </div>
         </div>
       </div>

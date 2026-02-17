@@ -11,7 +11,6 @@ export default function Navigation() {
 
   const { isAuthenticated } = useAuth();
 
-
   const scrollToSection = (id) => {
     const element = document.getElementById(id);
     if (element) {

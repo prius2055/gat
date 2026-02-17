@@ -3,6 +3,12 @@ import Certificate from "../img/apc-certificate.jpeg";
 import "./Endorsements.css";
 
 export default function Endorsements() {
+  const scrollToSection = (id) => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
   const endorsements = [
     {
       title: "APC National Chairman Recognition",
@@ -152,11 +158,10 @@ export default function Endorsements() {
               verification.
             </p>
             <div className="verification-buttons">
-              <button className="verification-button verification-button-primary">
-                <FileCheck className="button-icon" />
-                View Certificates
-              </button>
-              <button className="verification-button verification-button-secondary">
+              <button
+                className="verification-button verification-button-secondary"
+                onClick={() => scrollToSection("contact")}
+              >
                 Contact for Verification
               </button>
             </div>

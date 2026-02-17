@@ -1,6 +1,7 @@
 // import { ImageWithFallback } from "./figma/ImageWithFallback";
 import { Linkedin, Mail, Award, Users2, Target } from "lucide-react";
 import "./AboutUs.css";
+import { Link } from "react-router-dom";
 
 export default function AboutUs() {
   const teamMembers = [
@@ -168,10 +169,9 @@ export default function AboutUs() {
             from you.
           </p>
           <div className="cta-buttons">
-            <button className="cta-button cta-button-primary">Apply Now</button>
-            <button className="cta-button cta-button-secondary">
-              Volunteer Opportunities
-            </button>
+            <Link to="/register" className="cta-button cta-button-primary">
+              Join Our Team
+            </Link>
           </div>
         </div>
       </div>

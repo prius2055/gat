@@ -8,6 +8,8 @@ import Initiatives from "../components/Initiatives";
 import Contact from "../components/Contact";
 import Footer from "../components/Footer";
 
+import "./Homepage.css";
+
 const Homepage = () => {
   return (
     <div className="homepage">

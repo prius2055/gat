@@ -8,6 +8,7 @@ import {
   CheckCircle2,
 } from "lucide-react";
 import "./DiasporaEngagement.css";
+import { Link } from "react-router-dom";
 
 export default function DiasporaEngagement() {
   const benefits = [
@@ -218,10 +219,10 @@ export default function DiasporaEngagement() {
               unlock your benefits.
             </p>
             <div className="cta-buttons">
-              <button className="cta-button cta-button-primary">
+              <Link to="/register" className="cta-button cta-button-primary">
                 Register as Diaspora Member
                 <ArrowRight className="button-icon" />
-              </button>
+              </Link>
               <button className="cta-button cta-button-secondary">
                 Contact Diaspora Coordinator
               </button>

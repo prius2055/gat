@@ -1,8 +1,14 @@
 import { ArrowRight, Users, Heart, TrendingUp } from "lucide-react";
-// import { ImageWithFallback } from "./figma/ImageWithFallback";
+import { Link } from "react-router-dom";
 import "./Hero.css";
 
 export default function Hero() {
+  const scrollToSection = (id) => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
   return (
     <section id="home" className="hero-section">
       <div className="hero-container">
@@ -26,11 +32,14 @@ export default function Hero() {
             </p>
 
             <div className="hero-buttons">
-              <button className="hero-button hero-button-primary">
+              <Link to="/register" className="hero-button hero-button-primary">
                 Join the Movement
                 <ArrowRight className="button-icon" />
-              </button>
-              <button className="hero-button hero-button-secondary">
+              </Link>
+              <button
+                className="hero-button hero-button-secondary"
+                onClick={() => scrollToSection("about")}
+              >
                 Learn More
               </button>
             </div>
