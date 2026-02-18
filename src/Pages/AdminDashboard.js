@@ -25,7 +25,7 @@ export default function AdminDashboard({ onLogout }) {
 
   useEffect(() => {
     getAllUsers();
-  }, []);
+  }, [getAllUsers]);
 
   const handleLogout = () => {
     logout();
