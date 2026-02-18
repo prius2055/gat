@@ -1,4 +1,4 @@
-import { createContext, useContext, useState, useEffect } from "react";
+import { createContext, useContext, useState } from "react";
 import { useNavigate } from "react-router-dom";
 const UserContext = createContext();
 
@@ -8,9 +8,9 @@ const BASE_URL = `https://gat-backend-xi05.onrender.com/api/v1`;
 
 export const UserProvider = ({ children }) => {
   const [allUsers, setAllUsers] = useState(null);
-  const [loading, setLoading] = useState(true);
+  const [setLoading] = useState(true);
 
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
 
   const getAllUsers = async () => {
     const token = localStorage.getItem("token");
