@@ -1,5 +1,6 @@
-import { useState, useMemo } from "react";
-import { useAuth } from "./AuthContext";
+import { useState, useMemo, useEffect } from "react";
+import { useAuth } from "../Context/AuthContext";
+import { useUser } from "../Context/userContext";
 import {
   Shield,
   LogOut,
@@ -16,11 +17,15 @@ import {
 import "./AdminDashboard.css";
 
 export default function AdminDashboard({ onLogout }) {
-  const { user, logout, getAllUsers } = useAuth();
   const [searchQuery, setSearchQuery] = useState("");
   const [filterStatus, setFilterStatus] = useState("all");
 
-  const allUsers = getAllUsers();
+  const { user, logout } = useAuth();
+  const { getAllUsers, allUsers } = useUser();
+
+  useEffect(() => {
+    getAllUsers();
+  }, []);
 
   const handleLogout = () => {
     logout();

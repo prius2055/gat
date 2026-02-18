@@ -25,9 +25,9 @@ export default function Navigation() {
         <div className="navigation-content">
           {/* Logo */}
           <div className="logo-container">
-            <div className="logo-icon">
-              <img src={Logo} alt="GAT Logo" className="logo-image" />
-            </div>
+         
+              <img src={Logo} alt="GAT Logo" className="nav-logo-image" />
+      
             <div>
               <div className="logo-title">Global Alliance</div>
               <div className="logo-subtitle">For Tinubu Campaign</div>
