@@ -119,15 +119,9 @@
   gap: 1rem;
 }
 
-.admin-logo {
-  width: 3rem;
-  height: 3rem;
-  background: linear-gradient(to bottom right, #16a34a, #15803d);
-  border-radius: 0.5rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+.admin-logo-image {
+  width: 4rem;
+  height: 4rem;
 }
 
 .logo-text {
@@ -218,7 +212,7 @@
 
 .stats-grid {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: 1rem;
 }
 
@@ -510,6 +504,7 @@
   width: 100%;
   border-collapse: collapse;
   font-size: 0.9375rem;
+  text-align: left;
 }
 
 /* Header row */
@@ -830,7 +825,7 @@
 
 /* ── Extra Small  max 360px ── */
 @media (max-width: 360px) {
-  .admin-logo {
+  .admin-logo-image {
     width: 2.5rem;
     height: 2.5rem;
   }

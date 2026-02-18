@@ -21,9 +21,7 @@ export default function Footer() {
           {/* About Section */}
           <div className="footer-about">
             <div className="footer-logo">
-              <div className="logo-icon">
-                <img src={Logo} alt="GAT Logo" className="logo-image" />
-              </div>
+              <img src={Logo} alt="GAT Logo" className="logo-image" />
               <div>
                 <div className="footer-logo-title">Global Alliance</div>
                 <div className="logo-subtitle">For Tinubu Campaign</div>

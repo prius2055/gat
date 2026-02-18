@@ -78,7 +78,11 @@ export default function Login({ onLoginSuccess }) {
 
     console.log("Login response:", loginSuccess);
 
-    if (loginSuccess.status) {
+    if (loginSuccess.status && loginSuccess.user.role === "admin") {
+      setTimeout(() => {
+        navigate("/admin");
+      }, 2000);
+    } else if (loginSuccess.status && loginSuccess.user.role === "member") {
       setTimeout(() => {
         navigate("/dashboard");
       }, 2000);

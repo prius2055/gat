@@ -1,6 +1,7 @@
-import { useState, useMemo, useEffect } from "react";
+import { useState, useMemo, useEffect, useCallback } from "react";
 import { useAuth } from "../Context/AuthContext";
-import { useUser } from "../Context/userContext";
+import { Link } from "react-router-dom";
+import Logo from "../img/logo.png";
 import {
   Shield,
   LogOut,
@@ -16,12 +17,47 @@ import {
 
 import "./AdminDashboard.css";
 
+// const BASE_URL = `http://localhost:5000/api/v1`;
+
+const BASE_URL = `https://gat-backend-xi05.onrender.com/api/v1`;
+
 export default function AdminDashboard({ onLogout }) {
   const [searchQuery, setSearchQuery] = useState("");
   const [filterStatus, setFilterStatus] = useState("all");
+  const [allUsers, setAllUsers] = useState([]);
+  const [loading, setLoading] = useState(true);
 
   const { user, logout } = useAuth();
-  const { getAllUsers, allUsers } = useUser();
+  // const { getAllUsers } = useUser();
+
+  const getAllUsers = useCallback(async () => {
+    const token = localStorage.getItem("token");
+
+    if (!token) return;
+
+    setLoading(true);
+
+    try {
+      console.log("🔵 Getting all users...");
+
+      const response = await fetch(`${BASE_URL}/admin/users`, {
+        headers: {
+          Authorization: `Bearer ${token}`,
+          "Content-Type": "application/json",
+        },
+      });
+
+      const data = await response.json();
+
+      if (response.ok) {
+        setAllUsers(data.users || []);
+      }
+    } catch (err) {
+      console.error(err);
+    } finally {
+      setLoading(false);
+    }
+  }, []);
 
   useEffect(() => {
     getAllUsers();
@@ -29,19 +65,16 @@ export default function AdminDashboard({ onLogout }) {
 
   const handleLogout = () => {
     logout();
-    onLogout();
   };
 
   const getMembershipColor = (status) => {
     switch (status) {
-      case "Partner":
+      case "partner":
         return "badge-purple";
-      case "Premium Member":
+      case "premium_member":
         return "badge-amber";
-      case "Member":
+      case "member":
         return "badge-green";
-      case "Supporter":
-        return "badge-blue";
       default:
         return "badge-gray";
     }
@@ -49,16 +82,18 @@ export default function AdminDashboard({ onLogout }) {
 
   const getMembershipIcon = (status) => {
     switch (status) {
-      case "Partner":
+      case "partner":
         return <Briefcase className="tier-icon" />;
-      case "Premium Member":
+      case "premium_member":
         return <Award className="tier-icon" />;
-      case "Member":
+      case "member":
         return <UserCheck className="tier-icon" />;
       default:
         return <UserIcon className="tier-icon" />;
     }
   };
+
+  console.log("All Users:", allUsers);
 
   const filteredUsers = useMemo(() => {
     let filtered = allUsers;
@@ -74,7 +109,7 @@ export default function AdminDashboard({ onLogout }) {
     }
 
     if (filterStatus !== "all") {
-      filtered = filtered.filter((u) => u.membershipStatus === filterStatus);
+      filtered = filtered.filter((u) => u.role === filterStatus);
     }
 
     return filtered;
@@ -82,19 +117,13 @@ export default function AdminDashboard({ onLogout }) {
 
   const stats = useMemo(() => {
     const total = allUsers.length;
-    const partners = allUsers.filter(
-      (u) => u.membershipStatus === "Partner",
-    ).length;
+    const partners = allUsers.filter((u) => u.role === "partner").length;
     const premiumMembers = allUsers.filter(
-      (u) => u.membershipStatus === "Premium Member",
+      (u) => u.role === "premium_member",
     ).length;
-    const members = allUsers.filter(
-      (u) => u.membershipStatus === "Member",
-    ).length;
-    const supporters = allUsers.filter(
-      (u) => u.membershipStatus === "Supporter",
-    ).length;
-    return { total, partners, premiumMembers, members, supporters };
+    const members = allUsers.filter((u) => u.role === "member").length;
+
+    return { total, partners, premiumMembers, members };
   }, [allUsers]);
 
   const exportToCSV = () => {
@@ -105,16 +134,16 @@ export default function AdminDashboard({ onLogout }) {
       "Country",
       "Membership Status",
       "Member Since",
-      "Certificate Number",
+      "Membership Number",
     ];
     const rows = filteredUsers.map((u) => [
       u.name,
       u.email,
       u.phone,
       u.country,
-      u.membershipStatus,
+      u.role,
       new Date(u.membershipDate).toLocaleDateString(),
-      u.certificateNumber || "N/A",
+      u.membershipNumber || "N/A",
     ]);
     const csvContent = [headers, ...rows]
       .map((row) => row.join(","))
@@ -127,6 +156,8 @@ export default function AdminDashboard({ onLogout }) {
     link.click();
     window.URL.revokeObjectURL(url);
   };
+
+  if (loading) return <div>Loading...</div>;
 
   /* ── Access Denied ── */
   if (!user || !user.isAdmin) {
@@ -141,9 +172,9 @@ export default function AdminDashboard({ onLogout }) {
             <p className="access-denied-message">
               You do not have administrator privileges to access this page.
             </p>
-            <button onClick={handleLogout} className="access-denied-button">
+            <Link to="/login" className="access-denied-button">
               Return to Login
-            </button>
+            </Link>
           </div>
         </div>
       </div>
@@ -157,9 +188,7 @@ export default function AdminDashboard({ onLogout }) {
         <div className="admin-header-container">
           <div className="admin-header-content">
             <div className="admin-logo-section">
-              <div className="admin-logo">
-                <span className="logo-text">GAT</span>
-              </div>
+              <img src={Logo} alt="GAT Logo" className="admin-logo-image" />
               <div>
                 <h1 className="admin-main-title">Admin Dashboard</h1>
                 <p className="admin-subtitle">
@@ -234,18 +263,6 @@ export default function AdminDashboard({ onLogout }) {
               </div>
             </div>
           </div>
-
-          <div className="stat-card stat-card-blue">
-            <div className="stat-card-content">
-              <div>
-                <p className="stat-label">Supporters</p>
-                <p className="stat-value stat-value-blue">{stats.supporters}</p>
-              </div>
-              <div className="stat-icon-wrapper stat-icon-blue">
-                <UserIcon className="stat-icon" />
-              </div>
-            </div>
-          </div>
         </div>
 
         {/* ── Members Table Card ── */}
@@ -288,10 +305,9 @@ export default function AdminDashboard({ onLogout }) {
                   className="filter-select"
                 >
                   <option value="all">All Members</option>
-                  <option value="Partner">Partners</option>
-                  <option value="Premium Member">Premium Members</option>
-                  <option value="Member">Members</option>
-                  <option value="Supporter">Supporters</option>
+                  <option value="partner">Partners</option>
+                  <option value="premium_member">Premium Members</option>
+                  <option value="member">Members</option>
                 </select>
               </div>
             </div>
@@ -305,9 +321,9 @@ export default function AdminDashboard({ onLogout }) {
                     <th className="th">Email</th>
                     <th className="th">Phone</th>
                     <th className="th">Country</th>
-                    <th className="th">Status</th>
+                    <th className="th">Membership Status</th>
                     <th className="th">Member Since</th>
-                    <th className="th">Certificate No.</th>
+                    <th className="th">Membership No.</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -330,14 +346,14 @@ export default function AdminDashboard({ onLogout }) {
                         </td>
                         <td className="td">
                           <span
-                            className={`tier-badge ${getMembershipColor(member.membershipStatus)}`}
+                            className={`tier-badge ${getMembershipColor(member.role)}`}
                           >
-                            {getMembershipIcon(member.membershipStatus)}
-                            {member.membershipStatus}
+                            {getMembershipIcon(member.role)}
+                            {member.role}
                           </span>
                         </td>
                         <td className="td td-muted">
-                          {new Date(member.membershipDate).toLocaleDateString(
+                          {new Date(member.createdAt).toLocaleDateString(
                             "en-US",
                             {
                               year: "numeric",
@@ -347,7 +363,7 @@ export default function AdminDashboard({ onLogout }) {
                           )}
                         </td>
                         <td className="td td-mono">
-                          {member.certificateNumber || "N/A"}
+                          {member.memberShipNumber || "N/A"}
                         </td>
                       </tr>
                     ))
