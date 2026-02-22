@@ -25,9 +25,8 @@ export default function Navigation() {
         <div className="navigation-content">
           {/* Logo */}
           <div className="logo-container">
-         
-              <img src={Logo} alt="GAT Logo" className="nav-logo-image" />
-      
+            <img src={Logo} alt="GAT Logo" className="nav-logo-image" />
+
             <div>
               <div className="logo-title">Global Alliance</div>
               <div className="logo-subtitle">For Tinubu Campaign</div>
@@ -78,6 +77,9 @@ export default function Navigation() {
             >
               Contact
             </button>
+            <Link to="/donate" className="nav-button">
+              Support
+            </Link>
             {isAuthenticated ? (
               <Link to="/dashboard" className="nav-button">
                 Dashboard

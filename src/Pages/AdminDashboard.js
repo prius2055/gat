@@ -160,7 +160,7 @@ export default function AdminDashboard({ onLogout }) {
   if (loading) return <div>Loading...</div>;
 
   /* ── Access Denied ── */
-  if (!user || !user.isAdmin) {
+  if (!user || !user.role === "admin") {
     return (
       <div className="access-denied-page">
         <div className="access-denied-card">

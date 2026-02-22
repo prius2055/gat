@@ -72,7 +72,8 @@
 
 .logo-subtitle {
   font-size: 0.875rem;
-  color: #16a34a;
+  /* color: #16a34a; */
+  color: #00923f;
   line-height: 1.2;
 }
 
@@ -399,9 +400,9 @@ html {
 }
 
 /* Add padding to body to account for fixed navigation */
-body {
+/* body {
   padding-top: 2rem;
-}
+} */
 
 @media (max-width: 480px) {
   body {

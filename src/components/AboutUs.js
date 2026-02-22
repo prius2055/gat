@@ -1,44 +1,28 @@
 // import { ImageWithFallback } from "./figma/ImageWithFallback";
 import { Linkedin, Mail, Award, Users2, Target } from "lucide-react";
-import "./AboutUs.css";
 import { Link } from "react-router-dom";
+import Paul from "../img/paul.jpeg";
+import Jimoh from "../img/drjimoh.png";
+
+import "./AboutUs.css";
 
 export default function AboutUs() {
   const teamMembers = [
     {
       name: "Paul Belvis",
-      role: "Global Campaign Convener",
-      image: "https://i.postimg.cc/X7vqqpnd/paul.png",
+      role: "Director General",
+      title: "B.Sc, M.Sc, Ph.D.",
+      role_description: "Global Convener",
+      image: Paul,
       bio: "A seasoned political strategist with over 25 years of experience in grassroots mobilization and campaign management across Nigeria.",
-      linkedin: "#",
-      email: "adewale.ogunlesi@example.com",
     },
     {
-      name: "Mrs. Funmilayo Adeyemi",
-      role: "Diaspora Engagement Lead",
-      image:
-        "https://images.unsplash.com/photo-1746104718762-fb421954cc1b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxOaWdlcmlhbiUyMHdvbWFuJTIwcHJvZmVzc2lvbmFsJTIwcG9ydHJhaXR8ZW58MXx8fHwxNzcwMzU1OTYxfDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
-      bio: "International relations specialist coordinating efforts across 45+ countries, connecting diaspora communities with the campaign's vision.",
-      linkedin: "#",
-      email: "aisha.mohammed@example.com",
-    },
-    {
-      name: "Barr. Aisha Bello Mohammed",
-      role: "Legal Advisor & Compliance",
-      image:
-        "https://images.unsplash.com/photo-1642929295388-81948818c28f?q=80&w=735&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      bio: "Senior legal practitioner specializing in electoral law and constitutional matters, ensuring campaign compliance with Nigerian electoral regulations.",
-      linkedin: "#",
-      email: "funmilayo.adeyemi@example.com",
-    },
-    {
-      name: "Barr. Chinedu Eze",
-      role: "Communications Director",
-      image:
-        "https://images.unsplash.com/photo-1624234505035-e72442ce1f4d?q=80&w=685&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      bio: "Award-winning media strategist and public relations expert with extensive experience in political communications and digital media campaigns.",
-      linkedin: "#",
-      email: "chinedu.eze@example.com",
+      name: " Abubakar Ateiza Jimoh",
+      title: "B.Sc, M.Sc, Ph.D.",
+      role: "National Cordinator - Nigeria",
+      role_description: "Chief Strategist",
+      image: Jimoh,
+      bio: "An astute Grassroot mobilizer and prolific writer who is passionate about the ideals, vision, and mission of President Tinubu.",
     },
   ];
 
@@ -47,6 +31,12 @@ export default function AboutUs() {
       icon: Users2,
       value: "200+",
       label: "Campaign Staff",
+      color: "stat-blue",
+    },
+    {
+      icon: Target,
+      value: "20+",
+      label: "National Coordinators",
       color: "stat-blue",
     },
     {
@@ -133,26 +123,12 @@ export default function AboutUs() {
                 {/* Content */}
                 <div className="team-content">
                   <h4 className="team-name">{member.name}</h4>
+                  <h4 className="team-title">{member.title}</h4>
                   <p className="team-role">{member.role}</p>
+                  <p className="team-role-description">
+                    ({member.role_description})
+                  </p>
                   <p className="team-bio">{member.bio}</p>
-
-                  {/* Social Links */}
-                  <div className="team-social">
-                    <a
-                      href={member.linkedin}
-                      className="social-link"
-                      aria-label={`${member.name} LinkedIn`}
-                    >
-                      <Linkedin className="social-icon" />
-                    </a>
-                    <a
-                      href={`mailto:${member.email}`}
-                      className="social-link"
-                      aria-label={`Email ${member.name}`}
-                    >
-                      <Mail className="social-icon" />
-                    </a>
-                  </div>
                 </div>
               </div>
             ))}
@@ -161,16 +137,17 @@ export default function AboutUs() {
 
         {/* Join the Team CTA */}
         <div className="cta-section">
-          <h3 className="cta-title">Join Our Team</h3>
+          <h3 className="cta-title"> Support Our Mission</h3>
           <p className="cta-description">
-            We're always looking for passionate, dedicated individuals to join
-            our campaign. Whether you're interested in volunteering,
-            coordinating events, or taking on a leadership role, we want to hear
-            from you.
+            If you believe in the growth, unity, and progress of our nation,
+            your support can help strengthen grassroots engagement and community
+            coordination efforts. Every contribution, no matter the size, makes
+            a meaningful difference. Kindly consider making a donation today.
           </p>
+
           <div className="cta-buttons">
-            <Link to="/register" className="cta-button cta-button-primary">
-              Join Our Team
+            <Link to="/donate" className="cta-button cta-button-primary">
+              Support this campaign
             </Link>
           </div>
         </div>

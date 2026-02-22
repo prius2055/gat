@@ -124,13 +124,6 @@
   height: 4rem;
 }
 
-.logo-text {
-  color: white;
-  font-weight: 700;
-  font-size: 1.125rem;
-  letter-spacing: 0.025em;
-}
-
 .admin-main-title {
   font-size: 1.5rem;
   color: #111827;
@@ -829,9 +822,7 @@
     width: 2.5rem;
     height: 2.5rem;
   }
-  .logo-text {
-    font-size: 1rem;
-  }
+
   .admin-main-title {
     font-size: 1.25rem;
   }

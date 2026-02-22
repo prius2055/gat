@@ -20,16 +20,7 @@ export default function Endorsements() {
       color: "endorsement-blue",
       image: Certificate,
     },
-    {
-      title: "Presidential Acknowledgement",
-      authority: "The Presidency, Federal Republic of Nigeria",
-      official: "Office of the President",
-      description:
-        "Signed certificate of acknowledgement from the Presidency, officially recognizing our campaign's efforts and contributions to national unity, development, and the advancement of presidential initiatives.",
-      icon: Award,
-      color: "endorsement-green",
-      image: "",
-    },
+  
   ];
 
   const credentials = [

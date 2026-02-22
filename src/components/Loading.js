@@ -19,7 +19,7 @@ const Loading = ({
           <div className="spinner-ring"></div>
           <div className="spinner-ring"></div>
           <div className="spinner-logo">
-            <span className="logo-text">GAT2027</span>
+            <span className="loading-logo-text">GAT2027</span>
           </div>
         </div>
 

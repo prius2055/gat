@@ -41,7 +41,8 @@ const Mission = () => {
             <h3>Global Mobilization</h3>
             <p>
               Unite Nigerians at home and in the diaspora to build a powerful,
-              coordinated movement supporting progressive policies and reforms.
+              coordinated movement supporting progressive policies and reforms,
+              through the re-election of President Tinubu.
             </p>
           </div>
 

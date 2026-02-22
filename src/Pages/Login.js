@@ -135,7 +135,7 @@ export default function Login({ onLoginSuccess }) {
                   </p>
                 )}
                 <div className="input-wrapper">
-                  <Mail className="input-icon" />
+                  {/* <Mail className="input-icon" /> */}
                   <input
                     id="email"
                     type="email"
@@ -144,7 +144,7 @@ export default function Login({ onLoginSuccess }) {
                     onChange={handleChange}
                     name="email"
                     className="form-input"
-                    // required
+                    required
                   />
                 </div>
               </div>
@@ -160,7 +160,7 @@ export default function Login({ onLoginSuccess }) {
                   </p>
                 )}
                 <div className="input-wrapper">
-                  <Lock className="input-icon" />
+                  {/* <Lock className="input-icon" /> */}
                   <input
                     id="password"
                     type="password"
@@ -169,7 +169,7 @@ export default function Login({ onLoginSuccess }) {
                     onChange={handleChange}
                     name="password"
                     className="form-input"
-                    // required
+                    required
                   />
                 </div>
               </div>

@@ -175,7 +175,7 @@ export default function Register() {
                   Full Name *
                 </label>
                 <div className="input-wrapper">
-                  <User className="input-icon" />
+                  {/* <User className="input-icon" /> */}
                   <input
                     id="name"
                     name="name"
@@ -195,7 +195,7 @@ export default function Register() {
                   Email Address *
                 </label>
                 <div className="input-wrapper">
-                  <Mail className="input-icon" />
+                  {/* <Mail className="input-icon" /> */}
                   <input
                     id="email"
                     name="email"
@@ -215,7 +215,7 @@ export default function Register() {
                   Phone Number *
                 </label>
                 <div className="input-wrapper">
-                  <Phone className="input-icon" />
+                  {/* <Phone className="input-icon" /> */}
                   <input
                     id="phone"
                     name="phone"
@@ -235,7 +235,7 @@ export default function Register() {
                   Password
                 </label>
                 <div className="input-wrapper">
-                  <Lock className="input-icon" />
+                  {/* <Lock className="input-icon" /> */}
                   <input
                     id="password"
                     name="password"
@@ -256,7 +256,7 @@ export default function Register() {
                   Confirm Password
                 </label>
                 <div className="input-wrapper">
-                  <Lock className="input-icon" />
+                  {/* <Lock className="input-icon" /> */}
                   <input
                     id="confirmPassword"
                     name="confirmPassword"
@@ -276,7 +276,7 @@ export default function Register() {
                   Country/Region *
                 </label>
                 <div className="input-wrapper">
-                  <Globe className="input-icon select-icon" />
+                  {/* <Globe className="input-icon select-icon" /> */}
                   <select
                     id="country"
                     name="country"

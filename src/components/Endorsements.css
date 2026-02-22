@@ -131,9 +131,11 @@
 
 .endorsements-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 2rem;
-  margin-bottom: 5rem;
+  grid-template-columns: repeat(1, 1fr);
+  width: 100%;
+  max-width: 50rem;
+
+  margin: 0 auto 5rem auto;
 }
 
 .endorsement-card {
