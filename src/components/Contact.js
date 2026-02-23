@@ -50,8 +50,8 @@ export default function Contact() {
                 </div>
                 <div>
                   <h3 className="contact-item-title">Call Us</h3>
-                  <p className="contact-item-text">+234 (0) 800 TINUBU-1</p>
-                  <p className="contact-item-text">+234 (0) 123 456 7890</p>
+                  <p className="contact-item-text">+234 (0) 901 743 1825</p>
+                  <p className="contact-item-text">+1 647 977 7122</p>
                 </div>
               </div>
 

@@ -96,7 +96,7 @@ export default function Login({ onLoginSuccess }) {
       <div className="login-container">
         <div className="login-header">
           <div className="login-logo">
-            <img src={Logo} alt="Global Alliance Logo" className="logo-image" />
+            <img src={Logo} alt="Global Alliance Logo" className="login-logo-image" />
             <span className="logo-text">
               Global Alliance for Tinubu Campaign
             </span>

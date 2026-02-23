@@ -149,7 +149,7 @@ export default function Register() {
       <div className="register-container">
         <div className="register-header">
           <div className="register-logo">
-            <img src={Logo} alt="Global Alliance Logo" className="logo-image" />
+            <img src={Logo} alt="Global Alliance Logo" className="register-logo-image" />
             <span className="register-text">
               Global Alliance for Tinubu Campaign
             </span>

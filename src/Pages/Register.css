@@ -97,7 +97,7 @@
   letter-spacing: 0.025em;
 }
 
-.logo-image {
+.register-logo-image {
   width: 6rem;
   height: 6rem;
 }
@@ -431,9 +431,9 @@
     max-width: 26rem;
   }
 
-  .register-logo {
-    width: 3.5rem;
-    height: 3.5rem;
+  .register-logo-image {
+    width: 4rem;
+    height: 4rem;
   }
 
   .logo-text {

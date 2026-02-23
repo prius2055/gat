@@ -103,7 +103,13 @@ export default function Footer() {
               <li className="contact-item">
                 <Phone className="contact-icon" />
                 <div className="contact-text">
-                  <p>+234 (0) 800 TINUBU-1</p>
+                  <p> +234 (0) 901 743 1825</p>
+                </div>
+              </li>
+              <li className="contact-item">
+                <Phone className="contact-icon" />
+                <div className="contact-text">
+                  <p>+1 647 977 7122</p>
                 </div>
               </li>
               <li className="contact-item">

@@ -151,6 +151,9 @@ export default function Navigation() {
               >
                 Contact
               </button>
+              <Link to="/donate" className="nav-button nav-button-mobile">
+                Support
+              </Link>
               {isAuthenticated ? (
                 <Link to="/dashboard" className="nav-button nav-button-mobile">
                   Dashboard

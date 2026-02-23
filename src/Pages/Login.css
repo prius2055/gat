@@ -14,8 +14,10 @@
 }
 
 .login-container {
+  display: flex;
+  flex-direction: column;
   width: 100%;
-  max-width: 28rem;
+  /* max-width: 28rem; */
 }
 
 /* ================================================
@@ -24,6 +26,8 @@
 
 .login-header {
   text-align: center;
+  display: flex;
+  flex-direction: column;
 }
 
 .login-logo {
@@ -36,7 +40,7 @@
   margin-bottom: 1rem;
 }
 
-.logo-image {
+.login-logo-image {
   width: 6rem;
   height: 6rem;
 }
@@ -322,9 +326,9 @@
     max-width: 26rem;
   }
 
-  .login-logo {
-    width: 3.5rem;
-    height: 3.5rem;
+  .login-logo-image {
+    width: 4rem;
+    height: 4rem;
   }
 
   .logo-text {
