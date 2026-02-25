@@ -78,8 +78,8 @@ export default function Footer() {
                 </a>
               </li>
               <li>
-                <a href="#initiatives" className="footer-link">
-                  Key Initiatives
+                <a href="#involve" className="footer-link">
+                  Get Involved
                 </a>
               </li>
               <li>
@@ -97,7 +97,8 @@ export default function Footer() {
               <li className="contact-item">
                 <Mail className="contact-icon" />
                 <div className="contact-text">
-                  <p>info@globalalliance4tinubu.org</p>
+                  <p>info@globalalliancecampaign.com</p>
+                  <p>support@globalalliancecampaign.com</p>
                 </div>
               </li>
               <li className="contact-item">

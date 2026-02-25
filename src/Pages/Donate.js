@@ -19,7 +19,7 @@ import "./Donate.css";
 import Navigation from "../components/Navigation";
 import { Link } from "react-router-dom";
 
-export function Donate() {
+export default function Donate() {
   const [donationType, setDonationType] = useState("one-time"); // 'one-time' or 'monthly'
   const [amount, setAmount] = useState(null);
   const [customAmount, setCustomAmount] = useState("");

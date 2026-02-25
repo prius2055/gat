@@ -9,20 +9,18 @@ import "./AboutUs.css";
 export default function AboutUs() {
   const teamMembers = [
     {
-      name: "Paul Belvis",
+      name: "Bevis Paul Igbinoba",
       role: "Director General",
-      title: "B.Sc, M.Sc, Ph.D.",
       role_description: "Global Convener",
       image: Paul,
       bio: "A seasoned political strategist with over 25 years of experience in grassroots mobilization and campaign management across Nigeria.",
     },
     {
       name: " Abubakar Ateiza Jimoh",
-      title: "B.Sc, M.Sc, Ph.D.",
-      role: "National Cordinator - Nigeria",
-      role_description: "Chief Strategist",
+      role: "Organising Director",
+      role_description: "National Cordinator - Nigeria",
       image: Jimoh,
-      bio: "An astute Grassroot mobilizer and prolific writer who is passionate about the ideals, vision, and mission of President Tinubu.",
+      bio: "Our Chief strategist, he is an astute Grassroot mobilizer and prolific writer who is passionate about the ideals, vision, and mission of President Tinubu.",
     },
   ];
 
@@ -123,7 +121,6 @@ export default function AboutUs() {
                 {/* Content */}
                 <div className="team-content">
                   <h4 className="team-name">{member.name}</h4>
-                  <h4 className="team-title">{member.title}</h4>
                   <p className="team-role">{member.role}</p>
                   <p className="team-role-description">
                     ({member.role_description})

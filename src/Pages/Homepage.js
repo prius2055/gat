@@ -4,7 +4,7 @@ import Mission from "../components/Mission";
 import AboutUs from "../components/AboutUs";
 import DiasporaEngagement from "../components/DiasporaEngagement";
 import Endorsements from "../components/Endorsements";
-import Initiatives from "../components/Initiatives";
+import Support from "../components/Support";
 import Contact from "../components/Contact";
 import Footer from "../components/Footer";
 
@@ -19,7 +19,7 @@ const Homepage = () => {
       <AboutUs />
       <DiasporaEngagement />
       <Endorsements />
-      <Initiatives />
+      <Support />
       <Contact />
       <Footer />
     </div>

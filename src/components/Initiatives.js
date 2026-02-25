@@ -88,19 +88,6 @@ export default function Initiatives() {
             );
           })}
         </div>
-
-        {/* CTA Section */}
-        <div className="initiatives-cta">
-          <div className="cta-card">
-            <p className="cta-text">
-              Join us in supporting these transformative initiatives that will
-              shape Nigeria's future for generations to come.
-            </p>
-            <Link to="/register" className="cta-button">
-              Get Involved Today
-            </Link>
-          </div>
-        </div>
       </div>
     </section>
   );

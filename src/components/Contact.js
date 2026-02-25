@@ -36,10 +36,10 @@ export default function Contact() {
                 <div>
                   <h3 className="contact-item-title">Email Us</h3>
                   <p className="contact-item-text">
-                    info@globalalliance4tinubu.org
+                    info@globalalliancecampaign.com
                   </p>
                   <p className="contact-item-text">
-                    support@globalalliance4tinubu.org
+                    support@globalalliancecampaign.com
                   </p>
                 </div>
               </div>
@@ -50,8 +50,10 @@ export default function Contact() {
                 </div>
                 <div>
                   <h3 className="contact-item-title">Call Us</h3>
-                  <p className="contact-item-text">+234 (0) 901 743 1825</p>
-                  <p className="contact-item-text">+1 647 977 7122</p>
+                  <p className="contact-item-text">
+                    +234 (0) 901 743 1825 (Nigeria)
+                  </p>
+                  <p className="contact-item-text">+1 647 977 7122 (Canada)</p>
                 </div>
               </div>
 
@@ -59,15 +61,30 @@ export default function Contact() {
                 <div className="contact-icon-wrapper">
                   <MapPin className="contact-icon" />
                 </div>
-                <div>
-                  <h3 className="contact-item-title">Visit Us</h3>
-                  <p className="contact-item-text">
-                    Global Alliance Campaign Headquarters
-                    <br />
-                    3 Kumasi Crescent, Aminu Kano way, Wuse 2,
-                    <br />
-                    Abuja, Federal Capital Territory, Nigeria
-                  </p>
+                <div className="contact-address">
+                  <div>
+                    <h3 className="contact-item-title">Visit Us</h3>
+                    <p className="contact-item-text">
+                      Global Alliance Campaign Head Office
+                      <br />
+                      3 Kumasi Crescent, Aminu Kano way, Wuse 2,
+                      <br />
+                      Abuja, Federal Capital Territory, Nigeria
+                    </p>
+                  </div>
+
+                  <div>
+                    <p className="contact-item-text">
+                      Canadian Office
+                      <br />
+                      2288-100 City Centre Drive Mississauga
+                      <br/>
+                      (Greater Toronto
+                      Area)
+                      <br />
+                      Ontario, L5B 3C8 Canada
+                    </p>
+                  </div>
                 </div>
               </div>
 

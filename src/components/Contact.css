@@ -77,6 +77,13 @@
   gap: 1rem;
 }
 
+.contact-address {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
 .contact-icon-wrapper {
   width: 3rem;
   height: 3rem;

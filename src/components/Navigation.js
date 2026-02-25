@@ -29,7 +29,7 @@ export default function Navigation() {
 
             <div>
               <div className="logo-title">Global Alliance</div>
-              <div className="logo-subtitle">For Tinubu Campaign</div>
+              <div className="nav-logo-subtitle">For Tinubu Campaign</div>
             </div>
           </div>
 
@@ -66,10 +66,10 @@ export default function Navigation() {
               Endorsements
             </button>
             <button
-              onClick={() => scrollToSection("initiatives")}
+              onClick={() => scrollToSection("support")}
               className="nav-link"
             >
-              Initiatives
+              Get Involved
             </button>
             <button
               onClick={() => scrollToSection("contact")}
@@ -78,7 +78,7 @@ export default function Navigation() {
               Contact
             </button>
             <Link to="/donate" className="nav-button">
-              Support
+              Donate
             </Link>
             {isAuthenticated ? (
               <Link to="/dashboard" className="nav-button">
@@ -140,10 +140,10 @@ export default function Navigation() {
                 Endorsements
               </button>
               <button
-                onClick={() => scrollToSection("initiatives")}
+                onClick={() => scrollToSection("support")}
                 className="nav-mobile-link"
               >
-                Initiatives
+                Get Involved
               </button>
               <button
                 onClick={() => scrollToSection("contact")}
@@ -152,7 +152,7 @@ export default function Navigation() {
                 Contact
               </button>
               <Link to="/donate" className="nav-button nav-button-mobile">
-                Support
+                Donate
               </Link>
               {isAuthenticated ? (
                 <Link to="/dashboard" className="nav-button nav-button-mobile">
