@@ -52,41 +52,168 @@ export default function Dashboard({ onLogout }) {
     logout();
   };
 
+  // const handlePrintCard = () => {
+  //   if (membershipCardRef.current) {
+  //     const printWindow = window.open("", "", "width=800,height=600");
+  //     if (printWindow) {
+  //       printWindow.document.write(`
+  //         <html>
+  //           <head>
+  //             <title>Membership Card - ${user.name}</title>
+  //             <style>
+  //               body {
+  //                 margin: 0;
+  //                 padding: 20px;
+  //                 font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  //                 display: flex;
+  //                 justify-content: center;
+  //                 align-items: center;
+  //                 min-height: 100vh;
+  //               }
+  //               @media print {
+  //                 body {
+  //                   padding: 0;
+  //                 }
+  //               }
+  //             </style>
+  //           </head>
+  //           <body>
+  //             ${membershipCardRef.current.innerHTML}
+  //           </body>
+  //         </html>
+  //       `);
+  //       printWindow.document.close();
+  //       printWindow.print();
+  //     }
+  //   }
+  // };
+
   const handlePrintCard = () => {
     if (membershipCardRef.current) {
-      const printWindow = window.open("", "", "width=800,height=600");
+      const printWindow = window.open("", "", "width=900,height=700");
       if (printWindow) {
+        // Get computed styles for the card element and its children
+        const cardHTML = membershipCardRef.current.innerHTML;
+
         printWindow.document.write(`
-          <html>
-            <head>
-              <title>Membership Card - ${user.name}</title>
-              <style>
-                body {
-                  margin: 0;
-                  padding: 20px;
-                  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-                  display: flex;
-                  justify-content: center;
-                  align-items: center;
-                  min-height: 100vh;
-                }
-                @media print {
-                  body {
-                    padding: 0;
-                  }
-                }
-              </style>
-            </head>
-            <body>
-              ${membershipCardRef.current.innerHTML}
-            </body>
-          </html>
-        `);
+        <html>
+          <head>
+            <title>Membership Card - ${user.name}</title>
+            <style>
+              * { box-sizing: border-box; margin: 0; padding: 0; }
+              body {
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                gap: 24px;
+                padding: 40px;
+                background: #fff;
+                text-align:center;
+              }
+
+              /* FRONT CARD */
+              .membership-card {
+                width: 380px;
+                height: 220px;
+                border-radius: 16px;
+                position: relative;
+                overflow: hidden;
+                color: white;
+                padding: 20px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+              }
+
+              /* Card backgrounds by tier */
+              .card-purple { background: linear-gradient(135deg, #7c3aed, #4c1d95); }
+              .card-amber  { background: linear-gradient(135deg, #d97706, #78350f); }
+              .card-green   {background: linear-gradient(to bottom right, #16a34a, #166534)}
+              .card-blue   { background: linear-gradient(135deg, #2563eb, #1e3a8a); }
+              .card-gray   { background: linear-gradient(135deg, #6b7280, #1f2937); }
+
+              /* Decorative blobs */
+              .card-decoration {
+                position: absolute;
+                border-radius: 50%;
+                background: rgba(255,255,255,0.1);
+              }
+              .card-decoration-1 { width: 150px; height: 150px; top: -40px; right: -40px; }
+              .card-decoration-2 { width: 100px; height: 100px; bottom: -30px; left: -30px; }
+
+              .card-content-inner { position: relative; z-index: 1; height: 100%; display: flex; flex-direction: column; justify-content: space-between; }
+
+              /* Header */
+              .card-header-section { display: flex; justify-content: space-between; align-items:flex-start; }
+              .card-logo-section   { display: flex; align-items: center; gap: 8px; }
+              .card-logo           { width: 36px; height: 36px; object-fit: contain; background: white; border-radius: 50%; padding: 2px; }
+              .card-org-name       { font-size: 12px; font-weight: 700; letter-spacing: 0.05em; }
+              .card-org-subtitle   { font-size: 9px; opacity: 0.8; }
+              .card-tier-badge     { font-size: 9px; font-weight: 700; text-transform: uppercase; background: rgba(255,255,255,0.2); padding: 3px 8px; border-radius: 999px; border: 1px solid rgba(255,255,255,0.4); }
+
+              /* Member Info */
+              .card-member-info    { display: flex; flex-direction: column; gap: 4px; }
+              .card-label          { font-size: 8px; opacity: 0.7; letter-spacing: 0.1em; text-transform: uppercase; }
+              .card-value-large    { font-size: 18px; font-weight: 700; }
+              .card-info-grid      {display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;}
+              .card-value-mono     { font-size: 11px; font-family: monospace; }
+              .card-value          { font-size: 11px; }
+
+              /* Footer */
+              .card-footer-section { display: flex; justify-content: space-between; align-items: center; }
+              .card-valid-date     { font-size: 9px; opacity: 0.7; }
+              .card-verified       { display: flex; align-items: center; gap: 4px; font-size: 9px; background: rgba(255,255,255,0.2); padding: 3px 8px; border-radius: 999px; }
+              .card-verified-icon  { width: 10px; height: 10px; }
+
+              /* BACK CARD */
+              .membership-card-back {
+                width: 380px;
+                min-height: 220px;
+                border-radius: 16px;
+                background: #ffffff;
+                border: 2px solid #e5e5e5;
+                padding: 20px 20px 5px 20px;
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+              }
+              .back-inner   {display: flex; flex-direction: column; justify-content: space-between; text-align: center; }
+              .back-header  {display: flex;  justify-content: space-between; align-items: center; gap: 10px; padding-bottom: 2px;}
+              .back-logo    { width: 32px; height: 32px; object-fit: contain; background: white; border-radius: 50%; padding: 2px; }
+              .back-title   { font-size: 11px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; }
+              .back-message { font-size: 10px;  color: #333; line-height: 1.5;  margin-top: 10px; margin-bottom: 10px;}
+              .back-address { font-weight: 600; margin-top: 4px; margin-bottom: 5px;}
+
+              /* Signature */
+              .signature-section { display: flex; flex-direction: column; align-items: center;}
+              .card-signature   { height: 2rem; opacity:0.5; }
+              .signature-line   { width: 70%; height: 1px;  background:#000; }
+              .signature-label  { font-size: 9px;   color: #555;letter-spacing: 0.05em; }
+
+              .back-footer { font-size: 8px; text-align: center; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 10px; }
+
+              /* Lucide icons rendered as SVG — keep sizing */
+              svg { width: 1em; height: 1em; vertical-align: middle; }
+
+              @media print {
+                body { padding: 0; }
+                @page { margin: 10mm; }
+              }
+            </style>
+          </head>
+          <body>
+            ${cardHTML}
+          </body>
+        </html>
+      `);
         printWindow.document.close();
-        printWindow.print();
+        // Small delay so images/fonts load before printing
+        setTimeout(() => printWindow.print(), 500);
       }
     }
-    // window.print();
   };
 
   const membershipDate = new Date(user?.createdAt);
@@ -456,7 +583,6 @@ export default function Dashboard({ onLogout }) {
             </div>
           </div>
           <div className="profile-section">
-            {/* Membership Card */}
             {/* Quick Actions Sidebar */}
             <div className="sidebar-section">
               <div className="card actions-card">
