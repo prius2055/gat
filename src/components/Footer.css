@@ -64,7 +64,7 @@
 
 .logo-subtitle {
   font-size: 0.875rem;
-  color: #15813E;
+  color: #15813e;
   line-height: 1.2;
 }
 
@@ -197,6 +197,18 @@
 .contact-text {
   font-size: 0.875rem;
   line-height: 1.5;
+}
+
+.contact-detail {
+  margin-bottom: 0.5rem;
+}
+
+.contact-detail h4 {
+  margin: 0;
+}
+
+.address-text {
+  margin-bottom: 10px;
 }
 
 .contact-text p {

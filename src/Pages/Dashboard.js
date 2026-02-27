@@ -1,6 +1,7 @@
 import { useRef, useState, useEffect } from "react";
 import { useAuth } from "../Context/AuthContext";
 import { Link, useNavigate } from "react-router-dom";
+import Signature from "../img/signature.png";
 import {
   User,
   Mail,
@@ -581,14 +582,17 @@ export default function Dashboard({ onLogout }) {
 
                         <p className="back-address">
                           Global Alliance for Tinubu Campaign Head Office
-                          <br />
-                          3 Kumasi Crescent, Wuse 2<br />
-                          Abuja, Nigeria
+                          <br />3 Kumasi Crescent, Wuse 2,Abuja, Nigeria
                         </p>
                       </div>
 
                       {/* Signature Section */}
                       <div className="signature-section">
+                        <img
+                          src={Signature}
+                          alt="Authorized signature"
+                          className="card-signature"
+                        />
                         <div className="signature-line"></div>
                         <span className="signature-label">
                           Authorized Signature

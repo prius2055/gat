@@ -104,22 +104,41 @@ export default function Footer() {
               <li className="contact-item">
                 <Phone className="contact-icon" />
                 <div className="contact-text">
-                  <p> +234 (0) 901 743 1825</p>
-                </div>
-              </li>
-              <li className="contact-item">
-                <Phone className="contact-icon" />
-                <div className="contact-text">
+                  <p> +234 (0) 803 941 1592</p>
+                  <p> +234 (0) 802 315 5118</p>
                   <p>+1 647 977 7122</p>
                 </div>
               </li>
+
               <li className="contact-item">
                 <MapPin className="contact-icon" />
                 <div className="contact-text">
-                  <p>
-                    3 Kumasi Crescent, Off Aminu kano Way, Wuse 2<br />
-                    Abuja, FCT, Nigeria
-                  </p>
+                  <div className="contact-detail">
+                    <h4>Nigeria</h4>
+                    <div className="address">
+                      <div className="address-text">
+                        3 Kumasi Crescent, Off Aminu kano Way,
+                        <br /> Wuse 2 Abuja, FCT, Nigeria
+                      </div>
+
+                      <div className="address-text">
+                        27 Yaya Abatan Road Ogba-Ikeja, Lagos,Nigeria
+                      </div>
+
+                      <div className="address-text">
+                        Benin City Office: 5 Eguadase Street <br />
+                        Off Akpakpava Road Benin City, Edo State,Nigeria
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="contact-detail">
+                    <h4>Canada</h4>
+                    <div className="address-text">
+                      2288-100 City Centre Drive Mississauga <br />
+                      (Greater Toronto Area) Ontario, L5B 3C8 Canada
+                    </div>
+                  </div>
                 </div>
               </li>
             </ul>

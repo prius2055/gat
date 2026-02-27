@@ -1,5 +1,8 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+import Tshirt from "../img/t-shirt.png";
+import Cufflinks from "../img/cufflinks.png";
+import Band from "../img/wristband.png";
 
 import {
   Heart,
@@ -7,6 +10,7 @@ import {
   ShoppingBag,
   Share2,
   ArrowRight,
+  ArrowLeft,
   CheckCircle,
   MessageCircle,
   UserPlus,
@@ -15,8 +19,24 @@ import {
 import "./Support.css";
 
 export default function Support() {
-  //   const [isOpen, setIsOpen] = useState();
+  const [index, setIndex] = useState(0);
   const navigate = useNavigate();
+
+  const images = [
+    { src: Tshirt, alt: "t-shirt for sale" },
+    { src: Cufflinks, alt: "Cufflinks for sale" },
+    { src: Band, alt: "Wrist band for sale" },
+  ];
+
+  const next = () => setIndex((prev) => (prev + 1) % images.length);
+  const prev = () =>
+    setIndex((prev) => (prev - 1 + images.length) % images.length);
+
+  // optional auto slide
+  useEffect(() => {
+    const timer = setInterval(next, 4000);
+    return () => clearInterval(timer);
+  }, []);
 
   const scrollToSection = (id) => {
     const element = document.getElementById(id);
@@ -120,7 +140,7 @@ export default function Support() {
   //   };
 
   return (
-    <section  id="support" className="ways-to-support">
+    <section id="support" className="ways-to-support">
       <div className="support-container">
         {/* Section Header */}
         <div className="support-header">
@@ -131,6 +151,32 @@ export default function Support() {
             Tinubu's vision for a renewed Nigeria and be part of this historic
             movement.
           </p>
+        </div>
+
+        {/* <div div className="support-grid">
+          <img src={Tshirt} alt="t-shirt for sale" className="support-item" />
+          <img
+            src={Cufflinks}
+            alt="Cufflinks for sale"
+            className="support-item"
+          />
+          <img src={Band} alt="Wrist band for sale" className="support-item" />
+        </div> */}
+
+        <div className="support-carousel">
+          <button onClick={prev} className="nav-btn">
+            <ArrowLeft className="cta-icon" />
+          </button>
+
+          <img
+            src={images[index].src}
+            alt={images[index].alt}
+            className="support-item"
+          />
+
+          <button onClick={next} className="nav-btn">
+            <ArrowRight className="cta-icon" />
+          </button>
         </div>
 
         {/* Support Cards Grid */}

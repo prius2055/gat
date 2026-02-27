@@ -92,6 +92,51 @@
   margin-bottom: 3rem;
 }
 
+/* .support-item {
+  height: 20rem;
+  width: 95%;
+
+  padding: 2.5rem;
+
+  transition: all 0.3s ease;
+
+  border: 2px solid transparent;
+  overflow: hidden;
+} */
+
+.support-carousel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  width: 100%;
+  position: relative;
+}
+
+.support-item {
+  width: 50rem;
+  height: 25rem;
+  object-fit: contain;
+  border-radius: 12px;
+  transition: opacity 0.3s ease;
+}
+
+.nav-btn {
+  background: #158740;
+  color: white;
+  border: none;
+  padding: 10px 14px;
+  font-size: 20px;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+.nav-btn:hover {
+  background: white;
+  color: #158740;
+  border: 1px solid #158740;;
+}
+
 .support-card {
   position: relative;
   background: white;
