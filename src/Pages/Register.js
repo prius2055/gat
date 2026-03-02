@@ -149,7 +149,11 @@ export default function Register() {
       <div className="register-container">
         <div className="register-header">
           <div className="register-logo">
-            <img src={Logo} alt="Global Alliance Logo" className="register-logo-image" />
+            <img
+              src={Logo}
+              alt="Global Alliance Logo"
+              className="register-logo-image"
+            />
             <span className="register-text">
               Global Alliance for Tinubu Campaign
             </span>
@@ -321,10 +325,16 @@ export default function Register() {
               <div className="benefits-box">
                 <h4 className="benefits-title">Member Benefits:</h4>
                 <ul className="benefits-list">
-                  <li>✓ Access to the Presidential Corridor</li>
-                  <li>✓ Priority Access to Appointments</li>
-                  <li>✓ Contract Opportunities</li>
-                  <li>✓ Official Certificate of Acknowledgement</li>
+                  <li>
+                    ✓ Priority Access to Programs, Events and Initiatives
+                    Globally
+                  </li>
+                  <li>
+                    ✓ ⁠Exclusive Invitation to Programs and Events Globally
+                  </li>
+                  <li>✓ Networking Opportunities</li>
+                  <li>✓ ⁠Recognition and Visibility</li>
+                  <li>✓ ⁠Membership Cards and Certificates.</li>
                 </ul>
               </div>
 
@@ -342,8 +352,6 @@ export default function Register() {
                 </Link>
               </div>
             </form>
-
-           
           </div>
         </div>
       </div>
