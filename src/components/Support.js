@@ -74,9 +74,9 @@ export default function Support() {
       },
       color: "green",
       highlights: [
-        "Member certificate",
-        "Presidential corridor access",
-        "Networking events",
+        "⁠Membership Cards and Certificates",
+        "Priority Access to Programs, Events and Initiatives Globally",
+        "⁠Exclusive Invitation to Programs and Events Globally",
       ],
     },
     {
