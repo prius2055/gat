@@ -1,68 +1,71 @@
 import { useState } from "react";
 import {
   Heart,
-  CreditCard,
-  Building2,
-  Smartphone,
-  DollarSign,
-  Users,
+  // CreditCard,
+  // Building2,
+  // Smartphone,
+  // DollarSign,
+  // Users,
   CheckCircle,
   ArrowRight,
   ArrowLeft,
   Shield,
   Lock,
-  Info,
-  X,
-  Home
+  // Info,
+  // X,
+  Home,
 } from "lucide-react";
+
 import "./Donate.css";
 import Navigation from "../components/Navigation";
 import { Link } from "react-router-dom";
+import { usePayment } from "../Context/paymentContext";
 
 export default function Donate() {
-  const [donationType, setDonationType] = useState("one-time"); // 'one-time' or 'monthly'
-  const [amount, setAmount] = useState(null);
-  const [customAmount, setCustomAmount] = useState("");
-  const [paymentMethod, setPaymentMethod] = useState("card"); // 'card', 'bank', 'ussd'
+  // const [donationType, setDonationType] = useState("one-time"); // 'one-time' or 'monthly'
+  const [amount, setAmount] = useState("");
+
+  // const [paymentMethod, setPaymentMethod] = useState("card"); // 'card', 'bank', 'ussd'
   const [donorInfo, setDonorInfo] = useState({
     fullName: "",
     email: "",
     phone: "",
     anonymous: false,
   });
-  const [showThankYou, setShowThankYou] = useState(false);
+
   const [isProcessing, setIsProcessing] = useState(false);
 
+  const { makePayment } = usePayment();
+
   // Predefined donation amounts
-  const donationAmounts = [
-    { value: 1000, label: "₦1,000" },
-    { value: 5000, label: "₦5,000" },
-    { value: 10000, label: "₦10,000" },
-    { value: 25000, label: "₦25,000" },
-    { value: 50000, label: "₦50,000" },
-    { value: 100000, label: "₦100,000" },
-  ];
+  // const donationAmounts = [
+  //   { value: 1000, label: "₦1,000" },
+  //   { value: 5000, label: "₦5,000" },
+  //   { value: 10000, label: "₦10,000" },
+  //   { value: 25000, label: "₦25,000" },
+  //   { value: 50000, label: "₦50,000" },
+  //   { value: 100000, label: "₦100,000" },
+  // ];
 
   // Campaign impact examples
-  const impactExamples = [
-    { amount: 1000, impact: "Provides campaign materials for 5 volunteers" },
-    { amount: 5000, impact: "Sponsors a community outreach event" },
-    { amount: 10000, impact: "Supports voter registration drive in one ward" },
-    { amount: 25000, impact: "Funds a town hall meeting" },
-    { amount: 50000, impact: "Covers transportation for campaign team" },
-    { amount: 100000, impact: "Sponsors a major campaign rally" },
-  ];
+  // const impactExamples = [
+  //   { amount: 1000, impact: "Provides campaign materials for 5 volunteers" },
+  //   { amount: 5000, impact: "Sponsors a community outreach event" },
+  //   { amount: 10000, impact: "Supports voter registration drive in one ward" },
+  //   { amount: 25000, impact: "Funds a town hall meeting" },
+  //   { amount: 50000, impact: "Covers transportation for campaign team" },
+  //   { amount: 100000, impact: "Sponsors a major campaign rally" },
+  // ];
 
   // Handle amount selection
-  const handleAmountSelect = (value) => {
-    setAmount(value);
-    setCustomAmount("");
-  };
+  // const handleAmountSelect = (value) => {
+  //   setAmount(value);
+  //   setCustomAmount("");
+  // };
 
   // Handle custom amount
-  const handleCustomAmountChange = (e) => {
+  const handleAmountChange = (e) => {
     const value = e.target.value.replace(/[^0-9]/g, "");
-    setCustomAmount(value);
     setAmount(value ? parseInt(value) : null);
   };
 
@@ -76,14 +79,24 @@ export default function Donate() {
   };
 
   // Get impact message for selected amount
-  const getImpactMessage = () => {
-    if (!amount) return null;
+  // const getImpactMessage = () => {
+  //   if (!amount) return null;
 
-    const closestImpact = impactExamples
-      .filter((item) => item.amount <= amount)
-      .sort((a, b) => b.amount - a.amount)[0];
+  //   const closestImpact = impactExamples
+  //     .filter((item) => item.amount <= amount)
+  //     .sort((a, b) => b.amount - a.amount)[0];
 
-    return closestImpact?.impact;
+  //   return closestImpact?.impact;
+  // };
+
+  const resetForm = () => {
+    setAmount("");
+    setDonorInfo({
+      fullName: "",
+      email: "",
+      phone: "",
+      anonymous: false,
+    });
   };
 
   // Handle donation submission
@@ -102,69 +115,24 @@ export default function Donate() {
 
     setIsProcessing(true);
 
-    // Simulate payment processing
-    setTimeout(() => {
+    const payload = {
+      amount: amount,
+      fullName: donorInfo.fullName,
+      email: donorInfo.email,
+      phone: donorInfo.phone,
+    };
+
+    console.log(payload);
+
+    const result = await makePayment(payload);
+
+    if (!result) {
       setIsProcessing(false);
-      setShowThankYou(true);
+      resetForm();
+    }
 
-      // Reset form after 5 seconds
-      setTimeout(() => {
-        setShowThankYou(false);
-        resetForm();
-      }, 5000);
-    }, 2000);
-
-    // In production, integrate with payment gateway here
-    // Example: Paystack, Flutterwave, etc.
+    console.log(result);
   };
-
-  const resetForm = () => {
-    setAmount(null);
-    setCustomAmount("");
-    setDonorInfo({
-      fullName: "",
-      email: "",
-      phone: "",
-      anonymous: false,
-    });
-    setDonationType("one-time");
-    setPaymentMethod("card");
-  };
-
-  // Thank You Modal
-  if (showThankYou) {
-    return (
-      <div className="donate-page">
-        <div className="donate-container">
-          <div className="thank-you-modal">
-            <div className="thank-you-content">
-              <div className="thank-you-icon-wrapper">
-                <CheckCircle className="thank-you-icon" />
-              </div>
-              <h2 className="thank-you-title">Thank You for Your Support!</h2>
-              <p className="thank-you-message">
-                Your generous donation of{" "}
-                <strong>₦{amount?.toLocaleString()}</strong> has been received.
-              </p>
-              <p className="thank-you-submessage">
-                You are making a real difference in supporting President
-                Tinubu's vision for a better Nigeria. A receipt has been sent to
-                your email.
-              </p>
-              <div className="thank-you-actions">
-                <button
-                  onClick={() => setShowThankYou(false)}
-                  className="thank-you-button"
-                >
-                  Make Another Donation
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    );
-  }
 
   return (
     <div className="donate-page">
@@ -206,8 +174,8 @@ export default function Donate() {
                 <input
                   type="text"
                   placeholder="Enter amount"
-                  value={customAmount}
-                  onChange={handleCustomAmountChange}
+                  value={amount}
+                  onChange={handleAmountChange}
                   className="custom-amount-input"
                 />
               </div>
@@ -271,16 +239,16 @@ export default function Donate() {
           </div>
 
           {/* Security Note */}
-          {/* <div className="security-note">
+          <div className="security-note">
             <Shield className="security-icon" />
             <div>
-              <p className="security-title">Secure Donation</p>
-              <p className="security-text">
+              <span className="security-title">Secure Donation - </span>
+              <span className="security-text">
                 Your payment is secure and encrypted. We never store your card
                 details.
-              </p>
+              </span>
             </div>
-          </div> */}
+          </div>
 
           {/* Submit Button */}
           <div className="donate-btn-group">

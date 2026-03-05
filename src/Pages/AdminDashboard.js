@@ -1,5 +1,5 @@
 import { useState, useMemo, useEffect, useCallback } from "react";
-import { useAuth } from "../Context/AuthContext";
+import { useAuth } from "../Context/authContext";
 import { Link } from "react-router-dom";
 import Logo from "../img/logo.png";
 import {

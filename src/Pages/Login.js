@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useAuth } from "../Context/AuthContext";
+import { useAuth } from "../Context/authContext";
 import { Lock, Mail, AlertCircle } from "lucide-react";
 import Logo from "../img/logo.png";
 import { Link, useNavigate } from "react-router-dom";
