@@ -31,7 +31,6 @@ export default function Dashboard({ onLogout }) {
   const [upgradeDialogOpen, setUpgradeDialogOpen] = useState(false);
   const [selectedTier, setSelectedTier] = useState(null);
   const [isUpgrading, setIsUpgrading] = useState(false);
-  // const [upgradeSuccess, setUpgradeSuccess] = useState(false);
 
   useEffect(() => {
     if (!loading && !user) {
@@ -483,30 +482,6 @@ export default function Dashboard({ onLogout }) {
               </div>
             </div>
 
-            {/* <div className="card tier-info-card">
-              <div className="card-header">
-                <h3 className="card-title tier-title">
-                  <Award className="title-icon" />
-                  Membership Tier
-                </h3>
-              </div>
-              <div className="card-content">
-                <div className="tier-info">
-                  <div className="tier-current">
-                    <span className="tier-label">Current:</span>
-                    <span className={`status-badge-small ${colors.badge}`}>
-                      {user.role}
-                    </span>
-                  </div>
-                  <div className="tier-separator"></div>
-                  <p className="tier-description">
-                    As a {user.role.toLowerCase()} you have access to exclusive
-                    campaign resources, networking opportunities, and events.
-                  </p>
-                </div>
-              </div>
-            </div> */}
-
             {/* Member Benefits */}
             <div className="card benefits-card">
               <div className="member-card-header">
@@ -901,16 +876,6 @@ export default function Dashboard({ onLogout }) {
           </div>
         </div>
       )}
-
-      {/* Upgrade Success Alert */}
-      {/* {upgradeSuccess && (
-        <div className="success-alert">
-          <CheckCircle className="alert-icon" />
-          <p className="alert-message">
-            Your membership has been successfully upgraded to {selectedTier}.
-          </p>
-        </div>
-      )} */}
     </div>
   );
 }

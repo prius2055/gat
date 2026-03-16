@@ -1,14 +1,5 @@
 import { useState } from "react";
-import {
-  Heart,
-
-  ArrowRight,
-  ArrowLeft,
-  Shield,
-  Lock,
-
-  Home,
-} from "lucide-react";
+import { Heart, ArrowRight, ArrowLeft, Shield, Lock, Home } from "lucide-react";
 
 import "./Donate.css";
 import Navigation from "../components/Navigation";
@@ -16,10 +7,8 @@ import { Link } from "react-router-dom";
 import { usePayment } from "../Context/paymentContext";
 
 export default function Donate() {
-  // const [donationType, setDonationType] = useState("one-time"); // 'one-time' or 'monthly'
   const [amount, setAmount] = useState("");
 
-  // const [paymentMethod, setPaymentMethod] = useState("card"); // 'card', 'bank', 'ussd'
   const [donorInfo, setDonorInfo] = useState({
     fullName: "",
     email: "",
@@ -30,8 +19,6 @@ export default function Donate() {
   const [isProcessing, setIsProcessing] = useState(false);
 
   const { makePayment } = usePayment();
-
-
 
   // Handle custom amount
   const handleAmountChange = (e) => {
@@ -47,7 +34,6 @@ export default function Donate() {
       [name]: type === "checkbox" ? checked : value,
     }));
   };
-
 
   const resetForm = () => {
     setAmount("");
@@ -82,16 +68,12 @@ export default function Donate() {
       phone: donorInfo.phone,
     };
 
-    console.log(payload);
-
     const result = await makePayment(payload);
 
     if (!result) {
       setIsProcessing(false);
       resetForm();
     }
-
-    console.log(result);
   };
 
   return (
@@ -112,20 +94,6 @@ export default function Donate() {
         <form onSubmit={handleSubmit} className="donate-form">
           {/* Amount Selection */}
           <div className="form-section">
-            {/* <h3 className="section-title">Select Amount</h3>
-            <div className="amount-grid">
-              {donationAmounts.map((item) => (
-                <button
-                  key={item.value}
-                  type="button"
-                  className={`amount-button ${amount === item.value ? "selected" : ""}`}
-                  onClick={() => handleAmountSelect(item.value)}
-                >
-                  {item.label}
-                </button>
-              ))}
-            </div> */}
-
             {/* Custom Amount */}
             <div className="custom-amount-wrapper">
               <label className="custom-amount-label">Enter Amount</label>
@@ -140,17 +108,6 @@ export default function Donate() {
                 />
               </div>
             </div>
-
-            {/* Impact Message */}
-            {/* {amount && (
-              <div className="impact-message">
-                <CheckCircle className="impact-icon" />
-                <p>
-                  {getImpactMessage() ||
-                    `Your donation of ₦${amount.toLocaleString()} will make a significant impact!`}
-                </p>
-              </div>
-            )} */}
           </div>
 
           {/* Donor Information */}

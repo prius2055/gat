@@ -2,7 +2,8 @@ import { createContext, useContext, useState, useRef } from "react";
 
 const PaymentContext = createContext();
 
-const BASE_URL = process.env.REACT_APP_API_URL || "http://localhost:5000/api/v1";
+// const BASE_URL = `http://localhost:5000/api/v1`;
+const BASE_URL = `https://gat-backend-xi05.onrender.com/api/v1`;
 
 export const PaymentProvider = ({ children }) => {
   const [loading, setLoading] = useState(false);
@@ -46,7 +47,7 @@ export const PaymentProvider = ({ children }) => {
         {
           method: "GET",
           headers: { "Content-Type": "application/json" },
-        }
+        },
       );
 
       console.log("🔵 res.status:", res.status);
@@ -70,7 +71,9 @@ export const PaymentProvider = ({ children }) => {
   };
 
   return (
-    <PaymentContext.Provider value={{ makePayment, verifyPayment, loading, error }}>
+    <PaymentContext.Provider
+      value={{ makePayment, verifyPayment, loading, error }}
+    >
       {children}
     </PaymentContext.Provider>
   );
