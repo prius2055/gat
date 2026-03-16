@@ -1,18 +1,12 @@
 import { useState } from "react";
 import {
   Heart,
-  // CreditCard,
-  // Building2,
-  // Smartphone,
-  // DollarSign,
-  // Users,
-  CheckCircle,
+
   ArrowRight,
   ArrowLeft,
   Shield,
   Lock,
-  // Info,
-  // X,
+
   Home,
 } from "lucide-react";
 
@@ -37,31 +31,7 @@ export default function Donate() {
 
   const { makePayment } = usePayment();
 
-  // Predefined donation amounts
-  // const donationAmounts = [
-  //   { value: 1000, label: "₦1,000" },
-  //   { value: 5000, label: "₦5,000" },
-  //   { value: 10000, label: "₦10,000" },
-  //   { value: 25000, label: "₦25,000" },
-  //   { value: 50000, label: "₦50,000" },
-  //   { value: 100000, label: "₦100,000" },
-  // ];
 
-  // Campaign impact examples
-  // const impactExamples = [
-  //   { amount: 1000, impact: "Provides campaign materials for 5 volunteers" },
-  //   { amount: 5000, impact: "Sponsors a community outreach event" },
-  //   { amount: 10000, impact: "Supports voter registration drive in one ward" },
-  //   { amount: 25000, impact: "Funds a town hall meeting" },
-  //   { amount: 50000, impact: "Covers transportation for campaign team" },
-  //   { amount: 100000, impact: "Sponsors a major campaign rally" },
-  // ];
-
-  // Handle amount selection
-  // const handleAmountSelect = (value) => {
-  //   setAmount(value);
-  //   setCustomAmount("");
-  // };
 
   // Handle custom amount
   const handleAmountChange = (e) => {
@@ -78,16 +48,6 @@ export default function Donate() {
     }));
   };
 
-  // Get impact message for selected amount
-  // const getImpactMessage = () => {
-  //   if (!amount) return null;
-
-  //   const closestImpact = impactExamples
-  //     .filter((item) => item.amount <= amount)
-  //     .sort((a, b) => b.amount - a.amount)[0];
-
-  //   return closestImpact?.impact;
-  // };
 
   const resetForm = () => {
     setAmount("");
