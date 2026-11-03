@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useAuth } from "../Context/authContext";
+import { useAuth } from "../Context/AuthContext";
 import { Lock, Mail, AlertCircle } from "lucide-react";
 import Logo from "../img/logo.png";
 import { Link, useNavigate } from "react-router-dom";
@@ -87,7 +87,8 @@ export default function Login({ onLoginSuccess }) {
         navigate("/dashboard");
       }, 2000);
     } else {
-      setServerError("Invalid email or password");
+      setServerError(loginSuccess.message || "Invalid email or password");
+      setIsLoading(false);
     }
   };
 

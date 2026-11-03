@@ -1,5 +1,5 @@
 import { HashRouter, Routes, Route } from "react-router-dom";
-import { AuthProvider } from "./Context/authContext";
+import { AuthProvider } from "./Context/AuthContext";
 import { UserProvider } from "./Context/userContext";
 import { PaymentProvider } from "./Context/paymentContext";
 

@@ -1,169 +1,89 @@
-import {
-  // Facebook,
-  // Twitter,
-  // Instagram,
-  // Linkedin,
-  Mail,
-  Phone,
-  MapPin,
-} from "lucide-react";
+import { Mail, Phone, MapPin } from "lucide-react";
 import Logo from "../img/logo.png";
-
 import "./Footer.css";
+
+const QUICK_LINKS = [
+  { id: "home", label: "Home" },
+  { id: "mission", label: "Our Mission" },
+  { id: "about", label: "About Us" },
+  { id: "diaspora", label: "Diaspora" },
+  { id: "endorsements", label: "Endorsements" },
+  { id: "support", label: "Get Involved" },
+  { id: "contact", label: "Contact Us" },
+];
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
 
+  const go = (e, id) => {
+    e.preventDefault();
+    document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
+  };
+
   return (
     <footer className="footer">
-      <div className="footer-container">
+      <div className="container-x">
         <div className="footer-grid">
-          {/* About Section */}
           <div className="footer-about">
             <div className="footer-logo">
-              <img src={Logo} alt="GAT Logo" className="logo-image" />
+              <img src={Logo} alt="GAT Logo" />
               <div>
                 <div className="footer-logo-title">Global Alliance</div>
-                <div className="logo-subtitle">For Tinubu Campaign</div>
+                <div className="footer-logo-sub">For Tinubu Campaign</div>
               </div>
             </div>
-            <p className="footer-description">
-              United in support of President Bola Ahmed Tinubu's vision for a
-              prosperous, inclusive, and progressive Nigeria. Together, we
-              champion transformation and sustainable development.
+            <p>
+              United in support of President Bola Ahmed Tinubu's vision for a prosperous, inclusive,
+              and progressive Nigeria. Together, we champion transformation and sustainable development.
             </p>
-            {/* <div className="footer-social">
-              <a href="#" className="social-link" aria-label="Facebook">
-                <Facebook className="social-icon" />
-              </a>
-              <a href="#" className="social-link" aria-label="Twitter">
-                <Twitter className="social-icon" />
-              </a>
-              <a href="#" className="social-link" aria-label="Instagram">
-                <Instagram className="social-icon" />
-              </a>
-              <a href="#" className="social-link" aria-label="LinkedIn">
-                <Linkedin className="social-icon" />
-              </a>
-            </div> */}
           </div>
 
-          {/* Quick Links */}
-          <div className="footer-links">
+          <nav className="footer-links" aria-label="Footer">
             <h3 className="footer-heading">Quick Links</h3>
-            <ul className="links-list">
-              <li>
-                <a href="#home" className="footer-link">
-                  Home
-                </a>
-              </li>
-              <li>
-                <a href="#mission" className="footer-link">
-                  Our Mission
-                </a>
-              </li>
-              <li>
-                <a href="#about" className="footer-link">
-                  About Us
-                </a>
-              </li>
-              <li>
-                <a href="#diaspora" className="footer-link">
-                  Diaspora
-                </a>
-              </li>
-              <li>
-                <a href="#endorsements" className="footer-link">
-                  Endorsements
-                </a>
-              </li>
-              <li>
-                <a href="#involve" className="footer-link">
-                  Get Involved
-                </a>
-              </li>
-              <li>
-                <a href="#contact" className="footer-link">
-                  Contact Us
-                </a>
-              </li>
+            <ul>
+              {QUICK_LINKS.map((l) => (
+                <li key={l.id}>
+                  <a href={`#${l.id}`} onClick={(e) => go(e, l.id)}>{l.label}</a>
+                </li>
+              ))}
             </ul>
-          </div>
+          </nav>
 
-          {/* Contact Info */}
           <div className="footer-contact">
             <h3 className="footer-heading">Contact</h3>
-            <ul className="contact-list">
-              <li className="contact-item">
-                <Mail className="contact-icon" />
-                <div className="contact-text">
-                  <p>info@globalalliancecampaign.com</p>
-                  <p>support@globalalliancecampaign.com</p>
+            <ul>
+              <li>
+                <Mail size={18} />
+                <div>
+                  <a href="mailto:info@globalalliancecampaign.com">info@globalalliancecampaign.com</a>
+                  <a href="mailto:support@globalalliancecampaign.com">support@globalalliancecampaign.com</a>
                 </div>
               </li>
-              <li className="contact-item">
-                <Phone className="contact-icon" />
-                <div className="contact-text">
-                  <p> +234 (0) 803 941 1592</p>
-                  <p> +234 (0) 802 315 5118</p>
-                  <p>+1 647 977 7122</p>
+              <li>
+                <Phone size={18} />
+                <div>
+                  <a href="tel:+2348039411592">+234 (0) 803 941 1592</a>
+                  <a href="tel:+2348023155118">+234 (0) 802 315 5118</a>
+                  <a href="tel:+16479777122">+1 647 977 7122</a>
                 </div>
               </li>
-
-              <li className="contact-item">
-                <MapPin className="contact-icon" />
-                <div className="contact-text">
-                  <div className="contact-detail">
-                    <h4>Nigeria</h4>
-                    <div className="address">
-                      <div className="address-text">
-                        3 Kumasi Crescent, Off Aminu kano Way,
-                        <br /> Wuse 2 Abuja, FCT, Nigeria
-                      </div>
-
-                      <div className="address-text">
-                        27 Yaya Abatan Road Ogba-Ikeja, Lagos,Nigeria
-                      </div>
-
-                      <div className="address-text">
-                        Benin City Office: 5 Eguadase Street <br />
-                        Off Akpakpava Road Benin City, Edo State,Nigeria
-                      </div>
-                    </div>
-                  </div>
-
-                  <div className="contact-detail">
-                    <h4>Canada</h4>
-                    <div className="address-text">
-                      2288-100 City Centre Drive Mississauga <br />
-                      (Greater Toronto Area) Ontario, L5B 3C8 Canada
-                    </div>
-                  </div>
+              <li>
+                <MapPin size={18} />
+                <div>
+                  <strong>Nigeria</strong>
+                  <span>3 Kumasi Crescent, Off Aminu Kano Way, Wuse 2 Abuja, FCT</span>
+                  <span>27 Yaya Abatan Road Ogba-Ikeja, Lagos</span>
+                  <span>5 Eguadase Street, Off Akpakpava Road, Benin City, Edo State</span>
+                  <strong>Canada</strong>
+                  <span>2288-100 City Centre Drive Mississauga (GTA), Ontario, L5B 3C8</span>
                 </div>
               </li>
             </ul>
           </div>
         </div>
 
-        {/* Bottom Bar */}
         <div className="footer-bottom">
-          <div className="footer-bottom-content">
-            <p className="copyright">
-              © {currentYear} Global Alliance for Tinubu Campaign. All rights
-              reserved.
-            </p>
-            {/* <div className="footer-legal">
-              <a href="#" className="legal-link">
-                Privacy Policy
-              </a>
-              <a href="#" className="legal-link">
-                Terms of Service
-              </a>
-              <a href="#" className="legal-link">
-                Disclaimer
-              </a>
-            </div> */}
-          </div>
+          <p>© {currentYear} Global Alliance for Tinubu Campaign. All rights reserved.</p>
         </div>
       </div>
     </footer>

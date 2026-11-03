@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useAuth } from "../Context/authContext";
+import { useAuth } from "../Context/AuthContext";
 import Logo from "../img/logo.png";
 import {
   User,

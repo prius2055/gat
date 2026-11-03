@@ -7,7 +7,7 @@
 /* Base Page - Desktop */
 .dashboard-page {
   min-height: 100vh;
-  background: linear-gradient(to bottom right, #f0fdf4, #ffffff);
+  background: linear-gradient(to bottom right, #f1faf6, #ffffff);
 }
 
 /* ================================================
@@ -236,7 +236,7 @@
 .card {
   background-color: white;
   border-radius: 0.5rem;
-  border: 1px solid #dcfce7;
+  border: 1px solid #dff3ea;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
 }
 
@@ -249,7 +249,7 @@
 }
 
 .border-green {
-  border-color: #dcfce7;
+  border-color: #dff3ea;
 }
 
 .border-blue {
@@ -261,7 +261,7 @@
 }
 
 .member-card-header {
-  background: linear-gradient(to right, #f0fdf4, #ffffff);
+  background: linear-gradient(to right, #f1faf6, #ffffff);
   padding: 1.5rem;
   border-bottom: 1px solid #e5e7eb;
   border-top-left-radius: 0.5rem;
@@ -341,7 +341,7 @@
 }
 
 .print-button:hover {
-  background-color: #f0fdf4;
+  background-color: #f1faf6;
   border-color: #16a34a;
 }
 
@@ -678,7 +678,7 @@
 }
 
 .icon-bg-green {
-  background-color: #dcfce7;
+  background-color: #dff3ea;
 }
 
 .icon-bg-purple {
@@ -743,7 +743,7 @@
 }
 
 .badge-outline-green {
-  background-color: #dcfce7;
+  background-color: #dff3ea;
   color: #166534;
   border-color: #bbf7d0;
 }
@@ -822,7 +822,7 @@
 }
 
 .action-secondary:hover {
-  background-color: #f0fdf4;
+  background-color: #f1faf6;
   border-color: #16a34a;
   transform: translateY(-1px);
 }
@@ -946,7 +946,7 @@
 
 .upgrade-option.selected {
   border-color: #16a34a;
-  background-color: #f0fdf4;
+  background-color: #f1faf6;
 }
 
 .upgrade-icon {
@@ -1068,7 +1068,7 @@
   transform: translateX(-50%);
   max-width: 1280px;
   width: calc(100% - 2rem);
-  background-color: #dcfce7;
+  background-color: #dff3ea;
   border: 1px solid #16a34a;
   border-radius: 0.5rem;
   padding: 1rem 1.5rem;
@@ -1359,3 +1359,17 @@
     width: 100%;
   }
 } */
+
+/* ===== Brand polish + responsive safeguards ===== */
+.dashboard-page { font-family: var(--font-sans); }
+.dashboard-header { position: sticky; top: 0; z-index: 20; box-shadow: var(--shadow-sm); }
+.dashboard-main-title, .welcome-title { font-family: var(--font-serif); }
+.card { border-radius: var(--radius-lg); box-shadow: var(--shadow-sm); }
+.dashboard-page img { max-width: 100%; height: auto; }
+.dashboard-main, .dashboard-grid > * { min-width: 0; }
+.dashboard-page button, .dashboard-page a { min-height: 40px; }
+@media (max-width: 768px) {
+  .dashboard-page { overflow-x: hidden; }
+  .dashboard-header { position: static; }
+  .status-banner-content { flex-direction: column; align-items: flex-start; gap: 1rem; }
+}

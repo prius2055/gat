@@ -1,4 +1,1 @@
-a {
-  text-decoration: none;
-  /* width: 100%; */
-}
+.homepage { min-height: 100vh; background: #fff; }

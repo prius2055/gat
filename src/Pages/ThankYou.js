@@ -10,7 +10,7 @@ export default function ThankYou() {
   };
 
   return (
-   
+    <div className="donate-status">
       <div className="thank-you-content">
         <CheckCircle size={70} />
         <h2>Thank You for Your Support ❤️</h2>
@@ -21,6 +21,6 @@ export default function ThankYou() {
           <Home className="button-icon" />
         </button>
       </div>
-  
+    </div>
   );
 }

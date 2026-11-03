@@ -6,7 +6,7 @@
 /* ── Base Page ── */
 .admin-page {
   min-height: 100vh;
-  background: linear-gradient(to bottom right, #f0fdf4, #ffffff);
+  background: linear-gradient(to bottom right, #f1faf6, #ffffff);
 }
 
 /* ================================================
@@ -225,7 +225,7 @@
 }
 
 .stat-card-green {
-  border-color: #dcfce7;
+  border-color: #dff3ea;
 }
 .stat-card-purple {
   border-color: #e9d5ff;
@@ -285,7 +285,7 @@
 }
 
 .stat-icon-green {
-  background-color: #dcfce7;
+  background-color: #dff3ea;
 }
 .stat-icon-purple {
   background-color: #e9d5ff;
@@ -321,7 +321,7 @@
 
 .table-card {
   background-color: white;
-  border: 1px solid #dcfce7;
+  border: 1px solid #dff3ea;
   border-radius: 0.5rem;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
   overflow: hidden;
@@ -333,7 +333,7 @@
   align-items: flex-start;
   justify-content: space-between;
   padding: 1.5rem;
-  background: linear-gradient(to right, #f0fdf4, #ffffff);
+  background: linear-gradient(to right, #f1faf6, #ffffff);
   border-bottom: 1px solid #e5e7eb;
 }
 
@@ -382,7 +382,7 @@
 }
 
 .export-button:hover {
-  background-color: #f0fdf4;
+  background-color: #f1faf6;
   border-color: #16a34a;
   color: #16a34a;
 }
@@ -958,4 +958,13 @@
   .table-row:not(:last-child) {
     border-bottom-color: #374151;
   }
+}
+
+/* ===== Brand polish + responsive safeguards ===== */
+[class^="admin-"], [class*=" admin-"] { font-family: var(--font-sans); }
+.admin-page img { max-width: 100%; height: auto; }
+.admin-page table { width: 100%; }
+@media (max-width: 900px) {
+  .admin-page { overflow-x: hidden; }
+  .admin-page [class*="table-container"], .admin-page [class*="table-wrapper"], .admin-page [class*="table-responsive"] { overflow-x: auto; -webkit-overflow-scrolling: touch; }
 }

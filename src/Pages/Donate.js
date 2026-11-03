@@ -1,9 +1,8 @@
 import { useState } from "react";
-import { Heart, ArrowRight, ArrowLeft, Shield, Lock, Home } from "lucide-react";
+import { Heart, ArrowRight, ArrowLeft, Shield, Lock, Home, AlertCircle } from "lucide-react";
 
 import "./Donate.css";
-import Navigation from "../components/Navigation";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { usePayment } from "../Context/paymentContext";
 
 export default function Donate() {
@@ -19,6 +18,9 @@ export default function Donate() {
   const [isProcessing, setIsProcessing] = useState(false);
 
   const { makePayment } = usePayment();
+  const { search } = useLocation();
+  const paymentFailed = new URLSearchParams(search).get("failed") === "true";
+  const PRESETS = [1000, 5000, 10000, 25000, 50000, 100000];
 
   // Handle custom amount
   const handleAmountChange = (e) => {
@@ -91,6 +93,13 @@ export default function Donate() {
           </p>
         </div>
 
+        {paymentFailed && (
+          <div className="donate-alert" role="alert">
+            <AlertCircle size={18} />
+            <span>We could not confirm your payment. Please try again.</span>
+          </div>
+        )}
+
         <form onSubmit={handleSubmit} className="donate-form">
           {/* Amount Selection */}
           <div className="form-section">
@@ -102,10 +111,23 @@ export default function Donate() {
                 <input
                   type="text"
                   placeholder="Enter amount"
-                  value={amount}
+                  value={amount ?? ""}
                   onChange={handleAmountChange}
                   className="custom-amount-input"
+                  inputMode="numeric"
                 />
+              </div>
+              <div className="amount-presets">
+                {PRESETS.map((p) => (
+                  <button
+                    type="button"
+                    key={p}
+                    className={`amount-preset ${amount === p ? "active" : ""}`}
+                    onClick={() => setAmount(p)}
+                  >
+                    ₦{p.toLocaleString()}
+                  </button>
+                ))}
               </div>
             </div>
           </div>
@@ -181,7 +203,7 @@ export default function Donate() {
             >
               {isProcessing ? (
                 <>
-                  <div className="spinner"></div>
+                  <div className="donate-spinner"></div>
                   Processing...
                 </>
               ) : (

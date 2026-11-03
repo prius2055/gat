@@ -1,11 +1,11 @@
 import { useEffect, useRef } from "react";
 import { usePayment } from "../Context/paymentContext";
-import { useNavigate, useLocation } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+import "./Donate.css";
 
 const VerifyPayment = () => {
   const navigate = useNavigate();
   const { verifyPayment } = usePayment();
-  const { search } = useLocation(); // ✅ reads ?reference=xxx from hash URL
   const hasRun = useRef(false);
 
   useEffect(() => {
@@ -35,8 +35,11 @@ const VerifyPayment = () => {
   }, []);
 
   return (
-    <div style={{ textAlign: "center", padding: "2rem" }}>
-      <p>Verifying your payment, please wait...</p>
+    <div className="donate-status">
+      <div className="thank-you-content">
+        <div className="verify-spinner" aria-hidden="true"></div>
+        <p>Verifying your payment, please wait...</p>
+      </div>
     </div>
   );
 };
